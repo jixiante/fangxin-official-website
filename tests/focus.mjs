@@ -24,7 +24,7 @@ for(const language of ['zh','en','ru']){
     }
     if(!route)for(const b of businesses){
       assert(main.includes(`href="/${language}/explore/${b.id}/"`));
-      assert(main.includes(b.overview[language][1].replaceAll('&','&amp;')),`${language}: missing overview`);
+      assert(main.includes(b[language][0].replaceAll('&','&amp;')),'Homepage must retain all eight business names');
     }
     if(route==='explore/wellness/'){
       for(const id of ['rainforest','coast','springs','heritage','fragrance'])assert(main.includes(`id="${id}"`));

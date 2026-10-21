@@ -20,7 +20,14 @@ document.addEventListener('visibilitychange',updateMiniCode);
 document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>{
   updateMiniCode();
   opener=button;closeMenu();const dialog=document.getElementById(button.dataset.open);dialog.showModal();document.body.classList.add('dialog-open');
-  const video=dialog.querySelector('video');if(video&&!video.getAttribute('src')){video.src=video.dataset.src;video.load()}
+  const video=dialog.querySelector('video');
+  if(video&&button.dataset.videoSrc){
+    video.removeAttribute('src');video.dataset.src=button.dataset.videoSrc;video.poster=button.dataset.videoPoster;
+    video.setAttribute('aria-label',button.dataset.videoTitle);dialog.querySelector('h2').textContent=button.dataset.videoTitle;
+    dialog.querySelector('.fineprint').textContent=button.dataset.videoNote;
+    dialog.querySelector(':scope > p:last-child').textContent=button.dataset.videoDescription;
+  }
+  if(video&&!video.getAttribute('src')){video.src=video.dataset.src;video.load()}
 }));
 document.querySelectorAll('dialog').forEach(dialog=>{
   dialog.querySelector('[data-close]').addEventListener('click',()=>dialog.close());
