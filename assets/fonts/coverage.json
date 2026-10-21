@@ -2,14 +2,14 @@
   "sans": {
     "source": "notosanssc-NotoSansSC[wght].ttf",
     "source_sha256": "a3041811a78c361b1de50f953c805e0244951c21c5bd412f7232ef0d899af0da",
-    "woff2_sha256": "345447933c60246a3860733bb7437931202d38b0e98f1d8be9ca495ac8921188",
-    "bytes": 250004,
+    "woff2_sha256": "f0812aed6e59f4db00dffb8bd5ccc7010b5f50c25463706fc841925441405fbd",
+    "bytes": 250304,
     "weight_range": [
       400,
       600
     ],
-    "required_characters": 1091,
-    "covered_text_characters": 1091,
+    "required_characters": 1092,
+    "covered_text_characters": 1092,
     "missing_symbols": [],
     "russian_alphabet_covered": true,
     "codepoints": [
@@ -1236,6 +1236,7 @@
       38752,
       38754,
       39029,
+      39030,
       39033,
       39035,
       39044,
@@ -1280,8 +1281,8 @@
   "international": {
     "source": "notosans-NotoSans[wdth,wght].ttf",
     "source_sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
-    "woff2_sha256": "907c528399052c01b3a5f6c2f76207f57afdd71d896ce951a201ac04d44a266f",
-    "bytes": 65188,
+    "woff2_sha256": "a7e7f793f6e01d91f3d1ad5d875282d47a235f0a1fa9a6793569096180cdb702",
+    "bytes": 65148,
     "weight_range": [
       400,
       600

@@ -40,6 +40,17 @@ video.addEventListener('error',()=>{error.hidden=false});
 video.addEventListener('loadeddata',()=>{error.hidden=true});
 document.querySelector('[data-retry]').addEventListener('click',()=>{error.hidden=true;video.load()});
 
+const backToTop=document.querySelector('.back-to-top');
+function updateBackToTop(){backToTop.hidden=window.scrollY<Math.max(400,window.innerHeight*.7)}
+window.addEventListener('scroll',updateBackToTop,{passive:true});
+window.addEventListener('resize',updateBackToTop);
+window.addEventListener('pageshow',updateBackToTop);
+updateBackToTop();
+backToTop.addEventListener('click',()=>{
+  document.querySelector('.brand').focus({preventScroll:true});
+  window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+});
+
 // Native controls remain the fallback when playback is blocked or scripting is unavailable.
 document.querySelectorAll('.film-player').forEach(player=>{
   const video=player.querySelector('video'),cover=player.querySelector('.film-cover');
