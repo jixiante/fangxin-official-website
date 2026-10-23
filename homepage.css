@@ -175,7 +175,7 @@ body.home-redesign{margin:0;font-family:var(--sans);font-size:var(--body);line-h
 .home-redesign .media-link{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:16px;border-top:1px solid #e8f4ef;font-size:11px;font-weight:600;color:#569b7f}
 .home-redesign .media-link>span{font-size:18px}
 .home-redesign .source-note{font-size:11px;color:#779c8d;margin-top:23px;line-height:1.9}
-.home-redesign .cooperate-section{padding:62px 0;background:var(--forest);color:white;position:relative;overflow:hidden;isolation:isolate}
+.home-redesign .cooperate-section{padding:38px 0;background:var(--forest);color:white;position:relative;overflow:hidden;isolation:isolate}
 .home-redesign .cooperate-pattern{position:absolute;right:-60px;top:-160px;width:550px;height:550px;border:1px solid #42b58622;border-radius:50%;z-index:-1}
 .home-redesign .cooperate-pattern:before,.home-redesign .cooperate-pattern:after{content:"";position:absolute;inset:40px;border:1px solid #42b58622;border-radius:50%}
 .home-redesign .cooperate-pattern:after{inset:80px}
@@ -658,7 +658,7 @@ body.home-redesign{--section-space:64px}
 .home-redesign .media-body>p{min-height:42px;margin-top:8px;line-height:1.75}
 .home-redesign .media-link{margin-top:14px;padding-top:12px}
 .home-redesign .source-note{margin-top:17px}
-.home-redesign .cooperate-section{padding-block:44px}
+.home-redesign .cooperate-section{padding-block:30px}
 .home-redesign .cooperate-section h2{margin:9px 0;line-height:1.45}
 .home-redesign .cooperate-section .eyebrow{margin-top:9px}
 .home-redesign .footer-top{padding:42px 0 29px}
@@ -712,7 +712,7 @@ body.home-redesign{--section-space:42px}
 .home-redesign .media-body>p{min-height:0;margin-top:7px}
 .home-redesign .media-link{margin-top:14px;padding-top:11px}
 .home-redesign .source-note{margin-top:15px}
-.home-redesign .cooperate-section{padding-block:33px}
+.home-redesign .cooperate-section{padding-block:24px}
 .home-redesign .cooperate-section h2{line-height:1.5;margin:9px 0}
 .home-redesign .cooperate-actions{margin-top:19px}
 .home-redesign .footer-top{padding:30px 0 23px;gap:26px 24px}
@@ -925,15 +925,20 @@ body.home-redesign{--muted:#677b6d}
 
 /* The homepage header overlays the full-height hero and becomes solid on interaction. */
 .home-redesign .site-header{position:fixed;inset:0 0 auto;background:#fff;backdrop-filter:none;transition:background .25s,color .25s,box-shadow .25s}
+@media(min-width:1051px){
 .home-redesign .site-header:not(.is-scrolled):not(:hover):not(:focus-within):not(:has(.nav.open)){background:transparent;border-color:transparent;color:#fff}
 .home-redesign .site-header:not(.is-scrolled):not(:hover):not(:focus-within):not(:has(.nav.open)) :is(.brand b,.brand small,#navigation a,.language select){color:#fff}
 .home-redesign .site-header:not(.is-scrolled):not(:hover):not(:focus-within):not(:has(.nav.open)) #navigation a[aria-current=page]:after{background:#fff}
 .home-redesign .site-header:not(.is-scrolled):not(:hover):not(:focus-within):not(:has(.nav.open)) .header-trial{background:transparent;border:1px solid #ffffff80;color:#fff}
 .home-redesign .site-header:not(.is-scrolled):not(:hover):not(:focus-within):not(:has(.nav.open)) .menu-lines{color:#fff}
+}
 .home-redesign .site-header .language select{background-color:transparent}
 .home-redesign .site-header .language option{background:#fff;color:var(--ink)}
 .home-redesign .site-header.is-scrolled{box-shadow:0 2px 20px #183d3210}
-.home-redesign .hero .hero-slides{height:100vh;height:100svh;min-height:420px}
+/* Bound the image and its type to the same canvas when the browser zooms out. */
+.home-redesign .hero{width:100%;max-width:2400px;margin-inline:auto;container-type:inline-size}
+.home-redesign .hero .hero-slides{display:block;width:100%;height:auto;aspect-ratio:1920/998;min-height:0;margin-inline:auto}
+.home-redesign .hero .hero-slide{position:absolute}
 .home-redesign .hero .hero-content{padding-block:110px 80px}
 .home-redesign .hero-content :is(h1,h2)>span{display:block}
 .home-redesign .hero-content :is(h1,h2)>span+span{margin-left:1.5em;margin-top:.15em}
@@ -973,13 +978,13 @@ body.home-redesign{--muted:#677b6d}
 .home-redesign .hero-slide:not(.is-active) .hero-content{opacity:1}
 .home-redesign .hero .hero-media img{transform:none;transition:none}
 .home-redesign:lang(zh) .hero .hero-content{position:absolute;left:12%;top:28%;width:auto;padding:0;margin:0}
-.home-redesign:lang(zh) .hero-content :is(h1,h2){display:flex;align-items:flex-start;gap:.55em;font-family:'Songti SC','SimSun','Noto Serif CJK SC',serif;font-size:clamp(32px,2.8vw,48px);font-weight:400;line-height:1.3;letter-spacing:.1em;text-shadow:0 2px 15px #123d3540}
+.home-redesign:lang(zh) .hero-content :is(h1,h2){display:flex;align-items:flex-start;gap:.55em;font-family:'Songti SC','SimSun','Noto Serif CJK SC',serif;font-size:clamp(28px,2.8cqw,64px);font-weight:400;line-height:1.3;letter-spacing:.1em;text-shadow:0 2px 15px #123d3540}
 .home-redesign:lang(zh) .hero-content :is(h1,h2)>span{writing-mode:vertical-rl;text-orientation:upright;white-space:nowrap}
 .home-redesign:lang(zh) .hero-content :is(h1,h2)>span+span{margin-left:0;margin-top:1.6em}
 .home-redesign:lang(zh) .hero-slide:nth-child(2) .hero-content{left:7%;top:22%}
 .home-redesign:lang(zh) .hero-slide:nth-child(3) .hero-content{left:10%;top:22%}
 .home-redesign:not(:lang(zh)) .hero .hero-content{position:absolute;left:7%;top:22%;width:34%;padding:0;margin:0}
-.home-redesign:not(:lang(zh)) .hero-content :is(h1,h2){font-family:Georgia,'Times New Roman',serif;font-size:clamp(28px,3vw,44px);font-weight:400}
+.home-redesign:not(:lang(zh)) .hero-content :is(h1,h2){font-family:Georgia,'Times New Roman',serif;font-size:clamp(24px,3cqw,64px);font-weight:400}
 .home-redesign:not(:lang(zh)) .hero-content :is(h1,h2)>span+span{margin-left:.5em}
 @media(max-width:760px){
  .home-redesign:lang(zh) .hero .hero-content{left:8%;top:20%}
@@ -987,3 +992,83 @@ body.home-redesign{--muted:#677b6d}
  .home-redesign:not(:lang(zh)) .hero .hero-content{top:18%;width:78%}
  .home-redesign:not(:lang(zh)) .hero-content :is(h1,h2){font-size:28px}
 }
+
+/* Xiaoli section redesigned to match the approved mockup: chat window with
+   user bubble, preset reply card, question list and demo input row. */
+.home-redesign .xiaoli-section{background:white}
+.home-redesign .xiaoli-panel{background:#f4f8f5;border:1px solid #e6f0ea;border-radius:14px;padding:34px 38px}
+.home-redesign .xiaoli-head{display:flex;align-items:center;gap:16px}
+.home-redesign .xiaoli-avatar{width:58px;height:58px;border-radius:50%;mix-blend-mode:multiply;flex-shrink:0}
+.home-redesign .xiaoli-heading h2{font-size:24px;font-weight:750;color:var(--forest);letter-spacing:.5px;margin:0}
+.home-redesign .xiaoli-heading p{font-size:12px;color:#71948a;margin:5px 0 0}
+.home-redesign .xiaoli-more{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#2c4a3c;text-decoration:none;white-space:nowrap}
+.home-redesign .xiaoli-more:is(:hover,:focus-visible){color:var(--green)}
+.home-redesign .xiaoli-demo{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:34px;margin-top:26px;align-items:start}
+.home-redesign .xiaoli-ask-label{font-size:12px;font-weight:700;color:#41604f;margin:0 0 12px}
+.home-redesign .xiaoli-chips{display:grid;gap:10px}
+.home-redesign .xiaoli-chip{display:block;width:100%;text-align:left;border:1px solid #dce9e1;border-radius:8px;background:#fff;color:#31493d;font-size:13px;line-height:1.5;padding:11px 14px;transition:background .2s,color .2s,border-color .2s}
+.home-redesign .xiaoli-chip:is(:hover,:focus-visible){border-color:#9ad4bc}
+.home-redesign .xiaoli-chip.is-active{background:var(--forest);border-color:var(--forest);color:#fff;font-weight:600}
+.home-redesign .xiaoli-window{min-width:0}
+.home-redesign .xiaoli-window .home-answer{display:none}
+.home-redesign .xiaoli-window .home-answer[aria-hidden="false"]{display:grid;gap:12px;border:0;padding:0;margin:0}
+.home-redesign .xiaoli-window .question{justify-self:end;max-width:75%;background:#dff0e7;color:#274a3a;font-size:13px;font-weight:600;line-height:1.6;padding:10px 16px;border-radius:12px 12px 3px 12px;margin:0}
+.home-redesign .xiaoli-window .response-label{font-size:10px;letter-spacing:1px;color:#74a28f;margin:0}
+.home-redesign .xiaoli-window .reply{background:#fff;border:1px solid #e6f0ea;border-radius:12px 12px 12px 3px;padding:15px 18px;font-size:13px;color:#44614f;line-height:1.9;margin:0;min-height:0}
+.home-redesign .xiaoli-window .reply strong{display:block;color:var(--forest);font-size:14px;font-weight:700;margin-bottom:6px}
+.home-redesign .xiaoli-window .response-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:12px;font-weight:600;color:var(--green);text-decoration:underline;text-underline-offset:3px}
+.home-redesign .xiaoli-window .response-link span{font-size:14px}
+.home-redesign .xiaoli-input-row{display:flex;gap:10px;margin-top:18px}
+.home-redesign .xiaoli-input{flex:1;min-width:0;border:1px solid #e2ece6;border-radius:9px;background:#fff;padding:11px 14px;font-size:13px;color:#31493d;font-family:inherit}
+.home-redesign .xiaoli-input::placeholder{color:#9fb8ac}
+.home-redesign .xiaoli-input:focus{outline:2px solid #9ad4bc;outline-offset:1px}
+.home-redesign .xiaoli-send{border:0;border-radius:9px;background:#e3f2e9;color:#628979;font-size:13px;font-weight:600;padding:11px 22px;font-family:inherit}
+.home-redesign .xiaoli-note{font-size:10px;color:#8aa79a;margin:12px 0 0}
+@media(max-width:1050px){
+ .home-redesign .xiaoli-panel{padding:26px 24px}
+ .home-redesign .xiaoli-demo{grid-template-columns:1fr;gap:22px}
+ .home-redesign .xiaoli-chips{grid-template-columns:1fr 1fr;gap:9px}
+ .home-redesign .xiaoli-window{grid-row:1}}
+@media(max-width:760px){
+ .home-redesign .xiaoli-panel{padding:20px 16px;border-radius:12px}
+ .home-redesign .xiaoli-head{gap:12px}
+ .home-redesign .xiaoli-avatar{width:46px;height:46px}
+ .home-redesign .xiaoli-heading h2{font-size:19px}
+ .home-redesign .xiaoli-heading p{font-size:11px}
+ .home-redesign .xiaoli-more{font-size:12px}
+ .home-redesign .xiaoli-chips{grid-template-columns:1fr}
+ .home-redesign .xiaoli-window .question{max-width:88%}}
+/* Keep a comfortable fixed height on phones where the ratio would collapse. */
+@media(max-width:760px){
+ .home-redesign .hero .hero-slides{height:520px;min-height:0}}
+
+/* A shared grid keeps the image and reading panel steady when themes change. */
+.home-redesign .journey-section{background:#f6f9f6}
+.home-redesign .journey-carousel{padding-bottom:0;border-color:#e0e8e1;box-shadow:0 8px 28px #234d3410}
+.home-redesign .journey-slide{grid-template-columns:minmax(0,62fr) minmax(0,38fr);background:#fbfdfb}
+.home-redesign .journey-photo{aspect-ratio:16/10;height:100%;min-height:0}
+.home-redesign .journey-photo img,.home-redesign .journey-slide.is-active .journey-photo img{transform:none;transition:transform .6s ease}
+.home-redesign .journey-photo>span,.home-redesign .journey-photo:after,.home-redesign .journey-copy:after{display:none}
+.home-redesign .journey-copy{padding:34px 36px 94px;justify-content:flex-start;min-height:0;background:#fbfdfb}
+.home-redesign .journey-index{font-size:16px;font-weight:700;letter-spacing:.03em;color:var(--forest)}
+.home-redesign .journey-copy h3{margin-top:20px;font-size:30px;line-height:1.5}
+.home-redesign .journey-copy>p{margin-top:14px;line-height:1.9}
+.home-redesign .journey-tags{margin-top:16px}
+.home-redesign .journey-tags span{color:#789184;border-color:#dfe9e1;background:transparent}
+.home-redesign .journey-copy .text-link{display:inline-flex;margin-top:22px;padding:12px 20px;border:0;border-radius:4px;background:var(--forest);color:#fff;font-size:13px;gap:24px;line-height:1.5}
+.home-redesign .journey-carousel .carousel-controls{left:calc(62% + 26px);right:26px;bottom:18px;justify-content:space-between;padding:0;border:0;border-radius:0;background:transparent;pointer-events:none}
+.home-redesign .journey-carousel .carousel-controls button{width:40px;height:40px;min-width:40px;border:1px solid #dbe6de;background:#fff;color:#6e9980;pointer-events:auto}
+.home-redesign .journey-carousel .carousel-controls button:hover{background:#e9f1eb;color:var(--forest)}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .home-redesign .journey-slide.is-active .journey-photo:hover img{transform:scale(1.025)}}
+@media(min-width:761px) and (max-width:1100px){
+ .home-redesign .journey-slide{grid-template-columns:minmax(0,55fr) minmax(0,45fr)}
+ .home-redesign .journey-copy{padding:26px 26px 88px}
+ .home-redesign .journey-copy h3{font-size:26px}
+ .home-redesign .journey-carousel .carousel-controls{left:calc(55% + 20px);right:20px}}
+@media(max-width:760px){
+ .home-redesign .journey-slide{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+ .home-redesign .journey-photo{height:auto;aspect-ratio:16/10}
+ .home-redesign .journey-copy{padding:26px 24px 88px}
+ .home-redesign .journey-copy h3{font-size:26px;margin-top:14px}
+ .home-redesign .journey-carousel .carousel-controls{left:24px;right:24px;bottom:20px}}

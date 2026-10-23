@@ -6,7 +6,7 @@ const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
 function createCarousel(root){
   const slides=$$('.slide',root),dots=$$('[data-carousel-dot]',root),pause=$('[data-carousel-pause]',root),count=$('.carousel-count',root);
   const stage=$('.hero-slides',root);
-  let index=0,paused=reducedMotion.matches,hovered=false,focused=false,inView=false,timer,drag;
+  let index=0,paused=!pause||reducedMotion.matches,hovered=false,focused=false,inView=false,timer,drag;
   let transitions=[];
   const wrap=i=>(i+slides.length)%slides.length;
   function clearDragStyles(){
@@ -35,6 +35,7 @@ function createCarousel(root){
     }
   }
   function updatePause(){
+    if(!pause)return;
     pause.setAttribute('aria-pressed',String(paused));
     pause.setAttribute('aria-label',paused?pause.dataset.labelPlay:pause.dataset.labelPause);
     pause.firstElementChild.textContent=paused?'▷':'‖';
@@ -102,7 +103,7 @@ function createCarousel(root){
     stage.addEventListener('pointercancel',cancelDrag);
     stage.addEventListener('lostpointercapture',cancelDrag);
   }
-  pause.addEventListener('click',()=>{paused=!paused;updatePause();schedule();});
+  pause?.addEventListener('click',()=>{paused=!paused;updatePause();schedule();});
   root.addEventListener('mouseenter',()=>{hovered=!stage;schedule();});
   root.addEventListener('mouseleave',()=>{hovered=false;schedule();});
   function syncFocus(){
@@ -122,6 +123,8 @@ function createCarousel(root){
 $$('[data-carousel]').forEach(createCarousel);
 
 const homeButtons=$$('[data-home-example]'),answers=$$('.home-answer');
+// The placeholder is not localized by the build step, so sync it from the translated label.
+$$('.xiaoli-input').forEach(input=>{input.placeholder=input.getAttribute('aria-label')||''});
 homeButtons.forEach((button,index)=>button.addEventListener('click',()=>{
   homeButtons.forEach((tab,i)=>{tab.setAttribute('aria-pressed',String(i===index));tab.classList.toggle('is-active',i===index);});
   answers.forEach((answer,i)=>{answer.setAttribute('aria-hidden',String(i!==index));answer.inert=i!==index;});

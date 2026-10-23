@@ -1,12 +1,15 @@
 /* One navigation layout for every page; only the homepage starts transparent. */
 #site-header{--header-ink:#233d32;position:sticky;top:0;z-index:40;background:#fff;color:var(--header-ink);border-bottom:1px solid #eaf4f0;box-shadow:0 5px 16px -7px #173a3340;backdrop-filter:none;font-family:var(--sans);line-height:1.5}
-#site-header .header-inner{display:flex;align-items:center;flex-wrap:nowrap;width:calc(100% - 80px);max-width:1760px;height:90px;min-height:90px;margin:auto;padding:0;gap:clamp(24px,3vw,56px)}
+#site-header .header-inner{display:flex;align-items:center;flex-wrap:nowrap;width:calc(100% - 80px);max-width:2320px;height:90px;min-height:90px;margin:auto;padding:0;gap:clamp(24px,3vw,56px)}
 #site-header .brand{display:flex;align-items:center;gap:12px;flex-shrink:0;max-width:none;color:inherit}
 #site-header .brand img{width:56px;height:56px;object-fit:contain}
 #site-header .brand b{display:block;font-size:19px;font-weight:600;line-height:1.5;letter-spacing:1px;white-space:nowrap;color:inherit}
-#site-header #navigation{display:flex;position:static;flex:1;min-width:0;width:auto;margin:0;padding:0;align-items:center;justify-content:space-evenly;gap:16px;background:transparent;border:0;font-size:clamp(17px,1.25vw,22px);font-weight:600;white-space:nowrap}
+#site-header #navigation{display:flex;position:static;order:0;flex:1;min-width:0;width:auto;margin:0;padding:0;align-items:center;justify-content:space-evenly;gap:16px;background:transparent;color:inherit;border:0;font-size:clamp(17px,1.25vw,22px);font-weight:600;white-space:nowrap}
 #site-header #navigation a{position:relative;color:inherit;font-size:inherit;line-height:1.5;padding:29px 0;border:0;white-space:nowrap}
-#site-header #navigation a[aria-current]:after{content:'';display:block;position:absolute;inset:auto auto 16px calc(50% - 12px);width:24px;height:2px;background:currentColor;border-radius:0}
+/* Underline indicator: top-level items only (current page + hover/focus),
+   like the reference site; dropdown links use a plain text underline. */
+#site-header #navigation > a:after,#site-header #navigation .nav-item > a:after{content:'';display:block;position:absolute;inset:auto auto 16px calc(50% - 12px);width:24px;height:2px;background:currentColor;border-radius:0;opacity:0;transform:scaleX(.4);transition:opacity .18s ease,transform .18s ease}
+#site-header #navigation > a[aria-current]:after,#site-header #navigation .nav-item > a[aria-current]:after,#site-header #navigation > a:is(:hover,:focus-visible):after,#site-header #navigation .nav-item > a:is(:hover,:focus-visible):after{opacity:1;transform:none}
 #site-header #navigation a:hover{color:#2b7957}
 #site-header .header-tools{display:flex;align-items:center;flex-shrink:0;gap:22px;margin:0}
 #site-header .language select,#site-header .header-trial{font-size:14px;font-weight:500;line-height:1.5}
@@ -23,15 +26,31 @@
 #site-header .menu-toggle[aria-expanded=true] .menu-lines:before{transform:translateY(5px) rotate(45deg)}
 #site-header .menu-toggle[aria-expanded=true] .menu-lines:after{transform:translateY(-5px) rotate(-45deg)}
 .home-redesign #site-header{position:fixed;inset:0 0 auto;transition:background .25s,color .25s}
+@media(min-width:1051px){
 .home-redesign #site-header:not(.is-scrolled):not(:hover):not(:focus-within):not(:has(.open)){background:transparent;border-color:transparent;box-shadow:none;color:#fff}
 .home-redesign #site-header:not(.is-scrolled):not(:hover):not(:focus-within):not(:has(.open)) .header-trial{background:transparent;border-color:#ffffff80}
+}
 body:not(:lang(zh)) #site-header .brand{flex-shrink:1;min-width:0}
 body:not(:lang(zh)) #site-header .brand b{font-size:15px;max-width:215px;white-space:normal;letter-spacing:0;line-height:1.3}
 body:not(:lang(zh)) #site-header #navigation{font-size:clamp(14px,1.05vw,18px);gap:12px}
 body:not(:lang(zh)) #site-header .header-inner{gap:20px}
 body:not(:lang(zh)) #site-header .header-tools{gap:12px}
 body:not(:lang(zh)) #site-header .header-trial{max-width:150px;white-space:normal}
-@media(max-width:1350px){
+@media(min-width:1051px) and (max-width:1350px){
+ #site-header .header-inner,body:not(:lang(zh)) #site-header .header-inner{width:calc(100% - 48px);gap:16px}
+ #site-header .brand{gap:8px}
+ #site-header .brand img{width:44px;height:44px}
+ #site-header .brand b{font-size:15px;letter-spacing:0}
+ #site-header #navigation{font-size:15px;gap:10px}
+ #site-header .header-tools{gap:12px}
+ #site-header .language select,#site-header .header-trial{font-size:12px}
+ #site-header .header-trial{padding-inline:12px}
+ body:not(:lang(zh)) #site-header .brand b{font-size:12px;max-width:140px}
+ body:not(:lang(zh)) #site-header #navigation{font-size:12px;gap:8px}
+ body:not(:lang(zh)) #site-header .header-trial{max-width:110px}
+}
+@media(max-width:1050px){
+ .home-redesign #site-header{position:sticky;inset:auto;top:0}
  #site-header .header-inner{height:78px;min-height:78px;width:calc(100% - 48px);gap:20px}
  #site-header #navigation{display:none;position:absolute;inset:100% 0 auto;width:100%;padding:18px 24px;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;background:#fff;color:#233d32;border-bottom:1px solid #dce3da;font-size:16px}
  #site-header #navigation.open{display:grid}
@@ -52,4 +71,14 @@ body:not(:lang(zh)) #site-header .header-trial{max-width:150px;white-space:norma
  body:not(:lang(zh)) #site-header .brand b{font-size:12px;max-width:155px}
  body:not(:lang(zh)) #site-header .header-inner{gap:8px}
  body:not(:lang(zh)) #site-header .header-tools{gap:8px}
+}
+/* Business dropdown: opens on hover or keyboard focus, four columns side by side. */
+#site-header .nav-item.has-sub{position:relative;display:inline-flex}
+#site-header .nav-sub{position:absolute;top:100%;left:50%;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,auto);gap:4px 30px;justify-content:center;width:max-content;max-width:min(680px,92vw);padding:16px 28px;background:#fff;border:1px solid #dce8e2;border-radius:6px;box-shadow:0 18px 44px #103d2f1c;opacity:0;visibility:hidden;transition:opacity .16s,visibility .16s;z-index:60}
+#site-header .nav-item.has-sub:hover .nav-sub,#site-header .nav-item.has-sub:focus-within .nav-sub{opacity:1;visibility:visible}
+#site-header .nav-sub a{padding:7px 0;font-size:13px;font-weight:500;line-height:1.5;color:#3f5c4f;white-space:nowrap}
+#site-header .nav-sub a:is(:hover,:focus-visible){color:#2b7957;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:1050px){
+ #site-header .nav-item.has-sub{display:block}
+ #site-header .nav-sub{display:none}
 }

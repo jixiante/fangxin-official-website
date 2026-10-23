@@ -4,11 +4,11 @@ import {runInNewContext} from 'node:vm';
 
 const source=await readFile(new URL('../homepage.js',import.meta.url),'utf8');
 const controller=source.slice(source.indexOf('function createCarousel'),source.indexOf("$$('[data-carousel]')"));
-for(const reduced of [false,true]){
+for(const {reduced,manual} of [{reduced:false},{reduced:true},{reduced:false,manual:true}]){
   const element=()=>({events:{},attributes:{},classList:{toggle(){}},firstElementChild:{},setAttribute(k,v){this.attributes[k]=v},addEventListener(k,v){this.events[k]=v}});
   const root=element(),slides=Array.from({length:3},element),pause=element(),prev=element(),next=element(),count={};
   Object.assign(root,{dataset:{delay:'7000'},contains:()=>false});
-  const controls={'[data-carousel-pause]':pause,'[data-carousel-prev]':prev,'[data-carousel-next]':next,'.carousel-count':count};
+  const controls={'[data-carousel-pause]':manual?null:pause,'[data-carousel-prev]':prev,'[data-carousel-next]':next,'.carousel-count':count};
   pause.dataset={labelPlay:'开始自动轮播',labelPause:'暂停自动轮播'};
   const media={matches:reduced,addEventListener(){}},doc={hidden:false,body:{},events:{},querySelector:()=>null,addEventListener(k,v){this.events[k]=v}};
   let timer,intersection,modalChanged;
@@ -19,7 +19,12 @@ for(const reduced of [false,true]){
     setTimeout:cb=>{timer=cb;return 1},clearTimeout:()=>{timer=undefined},requestAnimationFrame:cb=>cb()
   });
   assert.equal(count.textContent,'01 / 03');assert(!timer,'Offscreen carousel must not run');
-  intersection([{isIntersecting:true}]);assert.equal(Boolean(timer),!reduced);
+  intersection([{isIntersecting:true}]);assert.equal(Boolean(timer),!reduced&&!manual);
+  if(manual){
+    next.events.click();assert.equal(count.textContent,'02 / 03');assert(!timer,'Arrow-only themes must stay still while reading');
+    prev.events.click();prev.events.click();assert.equal(count.textContent,'03 / 03','Previous theme wraps to the last');
+    assert.equal(slides.filter(s=>!s.inert).length,1);continue;
+  }
   if(!reduced){
     timer();assert.equal(count.textContent,'02 / 03');assert(slides[0].inert&&!slides[1].inert);
     root.events.mouseenter();assert(!timer);root.events.mouseleave();assert(timer);
