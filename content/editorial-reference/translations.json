@@ -1,0 +1,370 @@
+{
+  "遇见小黎": {
+    "en": "Meet Xiaoli",
+    "ru": "Знакомьтесь: Сяоли"
+  },
+  "海南影像": {
+    "en": "Hainan in Motion",
+    "ru": "Хайнань в кадре"
+  },
+  "小黎卡通形象": {
+    "en": "Xiaoli, the platform mascot",
+    "ru": "Сяоли — персонаж платформы"
+  },
+  "壹": {
+    "en": "I",
+    "ru": "I"
+  },
+  "贰": {
+    "en": "II",
+    "ru": "II"
+  },
+  "叁": {
+    "en": "III",
+    "ru": "III"
+  },
+  "家庭出行": {
+    "en": "Family travel",
+    "ru": "Семейная поездка"
+  },
+  "带长者来海南，想少走路，怎么安排？": {
+    "en": "Visiting Hainan with older relatives? How can we plan less walking?",
+    "ru": "Как спланировать поездку на Хайнань с пожилыми близкими и меньше ходить?"
+  },
+  "文化体验": {
+    "en": "Culture",
+    "ru": "Культура"
+  },
+  "上午：草木或器物讲解，先确认座位与步行距离。": {
+    "en": "Morning: discover plants or traditional objects. Check seating and walking distances first.",
+    "ru": "Утром: знакомство с растениями или традиционными предметами. Заранее уточните наличие мест для отдыха и расстояния."
+  },
+  "一餐一饮": {
+    "en": "Food & drink",
+    "ru": "Еда и напитки"
+  },
+  "中午：看汤饮配料，预留用餐与休息时间。": {
+    "en": "Midday: check soup and drink ingredients; allow time for a meal and a rest.",
+    "ru": "Днём: ознакомьтесь с составом супов и напитков, оставьте время на обед и отдых."
+  },
+  "滨海停留": {
+    "en": "By the coast",
+    "ru": "У моря"
+  },
+  "下午：按天气和体力决定停留或返程。": {
+    "en": "Afternoon: stay by the sea or head back, depending on the weather and everyone’s energy.",
+    "ru": "После обеда: решите, остаться у моря или вернуться, с учётом погоды и самочувствия."
+  },
+  "看家庭周末行程示意": {
+    "en": "See a family weekend itinerary",
+    "ru": "Маршрут семейных выходных"
+  },
+  "百合雪梨银耳汤": {
+    "en": "Lily, pear & snow fungus soup",
+    "ru": "Суп с лилией, грушей и тремеллой"
+  },
+  "百合 · 雪梨 · 银耳 · 冰糖": {
+    "en": "Lily bulb · pear · snow fungus · rock sugar",
+    "ru": "Луковица лилии · груша · тремелла · леденцовый сахар"
+  },
+  "山兰米桂圆茶": {
+    "en": "Shanlan rice & longan tea",
+    "ru": "Чай с рисом шаньлань и лонганом"
+  },
+  "山兰米 · 枸杞 · 桂圆 · 益智仁 · 虎奶菇": {
+    "en": "Shanlan rice · goji berries · longan · yizhi fruit · tiger milk mushroom",
+    "ru": "Рис шаньлань · годжи · лонган · плоды альпинии · тигровый молочный гриб"
+  },
+  "看一餐一饮内容": {
+    "en": "Explore food & drink",
+    "ru": "Подробнее о еде и напитках"
+  },
+  "想了解海南黎族医药文化，从哪里看？": {
+    "en": "Where can I discover the Li people’s medicinal traditions in Hainan?",
+    "ru": "С чего начать знакомство с лекарственными традициями народа ли на Хайнане?"
+  },
+  "传统技艺": {
+    "en": "Traditional crafts",
+    "ru": "Традиционные ремёсла"
+  },
+  "看草木如何进入传统技艺。": {
+    "en": "Discover how plants become part of traditional crafts.",
+    "ru": "Узнайте, как растения используются в традиционных ремёслах."
+  },
+  "通过公开纪录片认识地方医药文化。": {
+    "en": "Explore local medicinal traditions through publicly released documentaries.",
+    "ru": "Познакомьтесь с местными лекарственными традициями через опубликованные документальные фильмы."
+  },
+  "看黎苗特色内容": {
+    "en": "Explore Li & Miao culture",
+    "ru": "Узнать о культуре ли и мяо"
+  },
+  "进入体验版，或联系合作": {
+    "en": "Try the mini program or partner with us",
+    "ru": "Попробуйте мини-программу или обсудите сотрудничество"
+  },
+  "海南南药植物园晨间场景": {
+    "en": "Morning in a Hainan medicinal botanical garden",
+    "ru": "Утро в саду лекарственных растений Хайнаня"
+  },
+  "外部纪录": {
+    "en": "Documentaries",
+    "ru": "Документальные материалы"
+  },
+  "镜头里的海南风物": {
+    "en": "Hainan through the lens",
+    "ru": "Природа и культура Хайнаня в кадре"
+  },
+  "央视《远方的家》走进海南屯昌的沉香林，看一方水土如何养出一缕清香。": {
+    "en": "CCTV’s Home Far Away visits an agarwood forest in Tunchang, Hainan, to explore the landscape behind its fragrance.",
+    "ru": "Программа CCTV «Вдали от дома» посещает лес агаровых деревьев в Туньчане и рассказывает, как местная природа рождает этот аромат."
+  },
+  "原始发布页": {
+    "en": "View original source",
+    "ru": "Первоисточник"
+  },
+  "跟随央视《远方的家》，认识海南文昌这碗酸中带鲜的地方风味。": {
+    "en": "Discover Wenchang’s tangy, savoury local speciality with CCTV’s Home Far Away.",
+    "ru": "Вместе с программой CCTV «Вдали от дома» познакомьтесь с кисловатым, насыщенным вкусом традиционного блюда Вэньчана."
+  },
+  "从海南医科大学中医学院发布的影像线索，走近黎族医药文化的来路。": {
+    "en": "Explore the roots of Li medicinal culture through a film published by the School of Traditional Chinese Medicine at Hainan Medical University.",
+    "ru": "Фильм Института традиционной китайской медицины Хайнаньского медицинского университета знакомит с истоками лекарственной культуры народа ли."
+  },
+  "海南新闻": {
+    "en": "Hainan News",
+    "ru": "Новости Хайнаня"
+  },
+  "跟随报道走进屯昌，看看林下益智种植与当地产业如何相互成就。": {
+    "en": "Visit Tunchang to see how growing yizhi beneath the forest canopy supports local livelihoods and industry.",
+    "ru": "Репортаж из Туньчана показывает, как выращивание альпинии под пологом леса связано с развитием местной экономики."
+  },
+  "中国新闻网": {
+    "en": "China News Service",
+    "ru": "Китайская служба новостей"
+  },
+  "港澳大学生走进雨林，认识黎族药香技艺与这片山林里的地方文化。": {
+    "en": "Students from Hong Kong and Macao enter the rainforest to discover Li herbal incense crafts and local woodland culture.",
+    "ru": "Студенты из Гонконга и Макао знакомятся в тропическом лесу с искусством травяных благовоний народа ли и местной культурой."
+  },
+  "宣教影像": {
+    "en": "Educational films",
+    "ru": "Просветительские видео"
+  },
+  "三亚市中医院 · 宣教影像": {
+    "en": "Sanya TCM Hospital · Educational films",
+    "ru": "Больница ТКМ города Санья · Просветительские видео"
+  },
+  "认识罐具与项目场景。": {
+    "en": "An introduction to the cups and the treatment setting.",
+    "ru": "Знакомство с банками и обстановкой проведения процедуры."
+  },
+  "观察葫芦形罐具的专业演示。": {
+    "en": "Watch a professional demonstration of gourd-shaped cups.",
+    "ru": "Посмотрите профессиональную демонстрацию банок в форме тыквы."
+  },
+  "从宣教中认识头部养护项目。": {
+    "en": "Learn about a scalp care procedure through an educational film.",
+    "ru": "Познакомьтесь с процедурой ухода за кожей головы в просветительском видео."
+  },
+  "从器具与现场操作认识面部护理。": {
+    "en": "Discover facial care through the tools and a practical demonstration.",
+    "ru": "Знакомство с уходом за лицом через инструменты и демонстрацию процедуры."
+  },
+  "原声宣教展示砭石器具与操作场景。": {
+    "en": "An educational film with original audio shows bian stone tools and their use.",
+    "ru": "Видео с оригинальным звуком показывает инструменты из камня бянь и их применение."
+  },
+  "了解黎陶器具与地方医药文化。": {
+    "en": "Explore Li pottery tools and local medicinal traditions.",
+    "ru": "Узнайте о керамических инструментах народа ли и местных лекарственных традициях."
+  },
+  "以竹制器具为线索认识项目。": {
+    "en": "Discover the procedure through its bamboo tools.",
+    "ru": "Познакомьтесь с процедурой через используемые бамбуковые инструменты."
+  },
+  "阅读说明": {
+    "en": "Viewing notes",
+    "ru": "Примечания к просмотру"
+  },
+  "媒体影像版权归原发布方所有，页面仅作收录与索引，播放内容以原平台为准。": {
+    "en": "Media rights belong to the original publishers. This page is a curated index; the original platforms remain the authoritative sources.",
+    "ru": "Права на материалы принадлежат их издателям. Эта страница служит каталогом; приоритет имеет содержание на исходных платформах."
+  },
+  "宣教影像供了解项目，具体操作与适用性由专业人员评估，请勿自行模仿。": {
+    "en": "These films introduce the procedures. Qualified professionals must assess suitability and perform them; please do not attempt them yourself.",
+    "ru": "Видео предназначены для знакомства с процедурами. Их проведение и оценку применимости следует доверять специалистам; не повторяйте самостоятельно."
+  },
+  "涉及健康的内容仅供了解，不构成诊断、处方或疗效保证。": {
+    "en": "Health-related content is for information only and does not constitute a diagnosis, prescription or guarantee of results.",
+    "ru": "Материалы о здоровье носят информационный характер и не являются диагнозом, назначением или гарантией результата."
+  },
+  "沉香：一方水土，一缕清香": {
+    "en": "Agarwood: a scent rooted in place",
+    "ru": "Агаровое дерево: аромат родной земли"
+  },
+  "沉香：一方水土，一缕清香 封面": {
+    "en": "Agarwood: a scent rooted in place — cover",
+    "ru": "Агаровое дерево: аромат родной земли — обложка"
+  },
+  "播放：沉香：一方水土，一缕清香": {
+    "en": "Play: Agarwood: a scent rooted in place",
+    "ru": "Воспроизвести: Агаровое дерево: аромат родной земли"
+  },
+  "糟粕醋：文昌的家乡味道": {
+    "en": "Zaopocu: a taste of Wenchang",
+    "ru": "Цзаопоцу: вкус Вэньчана"
+  },
+  "糟粕醋：文昌的家乡味道 封面": {
+    "en": "Zaopocu: a taste of Wenchang — cover",
+    "ru": "Цзаопоцу: вкус Вэньчана — обложка"
+  },
+  "播放：糟粕醋：文昌的家乡味道": {
+    "en": "Play: Zaopocu: a taste of Wenchang",
+    "ru": "Воспроизвести: Цзаопоцу: вкус Вэньчана"
+  },
+  "山海黎医，草本传千年": {
+    "en": "Li herbal heritage, on film",
+    "ru": "Лийское травяное наследие в кадре"
+  },
+  "山海黎医，草本传千年 封面": {
+    "en": "Li herbal heritage, on film — cover",
+    "ru": "Лийское травяное наследие в кадре — обложка"
+  },
+  "播放：山海黎医，草本传千年": {
+    "en": "Play: Li herbal heritage, on film",
+    "ru": "Воспроизвести: Лийское травяное наследие в кадре"
+  },
+  "林下益智，南药故事": {
+    "en": "Yizhi beneath the forest canopy",
+    "ru": "Альпиния под пологом леса"
+  },
+  "林下益智，南药故事 封面": {
+    "en": "Yizhi beneath the forest canopy — cover",
+    "ru": "Альпиния под пологом леса — обложка"
+  },
+  "播放：林下益智，南药故事": {
+    "en": "Play: Yizhi beneath the forest canopy",
+    "ru": "Воспроизвести: Альпиния под пологом леса"
+  },
+  "雨林里，寻找黎族药香": {
+    "en": "Discovering Li aromatic craft",
+    "ru": "Лийское ароматическое ремесло"
+  },
+  "雨林里，寻找黎族药香 封面": {
+    "en": "Discovering Li aromatic craft — cover",
+    "ru": "Лийское ароматическое ремесло — обложка"
+  },
+  "播放：雨林里，寻找黎族药香": {
+    "en": "Play: Discovering Li aromatic craft",
+    "ru": "Воспроизвести: Лийское ароматическое ремесло"
+  },
+  "糟粕醋的风味故事": {
+    "en": "The story of zaopocu",
+    "ru": "История цзаопоцу"
+  },
+  "糟粕醋的风味故事 封面": {
+    "en": "The story of zaopocu — cover",
+    "ru": "История цзаопоцу — обложка"
+  },
+  "播放：糟粕醋的风味故事": {
+    "en": "Play: The story of zaopocu",
+    "ru": "Воспроизвести: История цзаопоцу"
+  },
+  "沉香造香技艺": {
+    "en": "The craft of agarwood incense",
+    "ru": "Ремесло агарового благовония"
+  },
+  "沉香造香技艺 封面": {
+    "en": "The craft of agarwood incense — cover",
+    "ru": "Ремесло агарового благовония — обложка"
+  },
+  "播放：沉香造香技艺": {
+    "en": "Play: The craft of agarwood incense",
+    "ru": "Воспроизвести: Ремесло агарового благовония"
+  },
+  "黎药砭石罐综合灸": {
+    "en": "Li stone-cup moxibustion",
+    "ru": "Лийские каменные банки и прижигание"
+  },
+  "黎药砭石罐综合灸 封面": {
+    "en": "Li stone-cup moxibustion — cover",
+    "ru": "Лийские каменные банки и прижигание — обложка"
+  },
+  "播放：黎药砭石罐综合灸": {
+    "en": "Play: Li stone-cup moxibustion",
+    "ru": "Воспроизвести: Лийские каменные банки и прижигание"
+  },
+  "藤灸葫芦罐（双罐）": {
+    "en": "Gourd cups: paired technique",
+    "ru": "Парная техника тыквообразных банок"
+  },
+  "藤灸葫芦罐（双罐） 封面": {
+    "en": "Gourd cups: paired technique — cover",
+    "ru": "Парная техника тыквообразных банок — обложка"
+  },
+  "播放：藤灸葫芦罐（双罐）": {
+    "en": "Play: Gourd cups: paired technique",
+    "ru": "Воспроизвести: Парная техника тыквообразных банок"
+  },
+  "黎药灸砭石头疗": {
+    "en": "Li stone-tool head care",
+    "ru": "Лийский уход за головой"
+  },
+  "黎药灸砭石头疗 封面": {
+    "en": "Li stone-tool head care — cover",
+    "ru": "Лийский уход за головой — обложка"
+  },
+  "播放：黎药灸砭石头疗": {
+    "en": "Play: Li stone-tool head care",
+    "ru": "Воспроизвести: Лийский уход за головой"
+  },
+  "黎药灸砭石美容": {
+    "en": "Li stone-tool facial care",
+    "ru": "Лийский уход за лицом"
+  },
+  "黎药灸砭石美容 封面": {
+    "en": "Li stone-tool facial care — cover",
+    "ru": "Лийский уход за лицом — обложка"
+  },
+  "播放：黎药灸砭石美容": {
+    "en": "Play: Li stone-tool facial care",
+    "ru": "Воспроизвести: Лийский уход за лицом"
+  },
+  "黎药砭石刮痧": {
+    "en": "Li stone-tool gua sha",
+    "ru": "Лийская техника гуаша"
+  },
+  "黎药砭石刮痧 封面": {
+    "en": "Li stone-tool gua sha — cover",
+    "ru": "Лийская техника гуаша — обложка"
+  },
+  "播放：黎药砭石刮痧": {
+    "en": "Play: Li stone-tool gua sha",
+    "ru": "Воспроизвести: Лийская техника гуаша"
+  },
+  "非遗黎陶铺灸技术": {
+    "en": "Li pottery moxibustion",
+    "ru": "Прижигание с лийской керамикой"
+  },
+  "非遗黎陶铺灸技术 封面": {
+    "en": "Li pottery moxibustion — cover",
+    "ru": "Прижигание с лийской керамикой — обложка"
+  },
+  "播放：非遗黎陶铺灸技术": {
+    "en": "Play: Li pottery moxibustion",
+    "ru": "Воспроизвести: Прижигание с лийской керамикой"
+  },
+  "黎药竹罐": {
+    "en": "Li bamboo cups",
+    "ru": "Лийские бамбуковые банки"
+  },
+  "黎药竹罐 封面": {
+    "en": "Li bamboo cups — cover",
+    "ru": "Лийские бамбуковые банки — обложка"
+  },
+  "播放：黎药竹罐": {
+    "en": "Play: Li bamboo cups",
+    "ru": "Воспроизвести: Лийские бамбуковые банки"
+  }
+}

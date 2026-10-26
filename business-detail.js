@@ -60,9 +60,10 @@ document.querySelectorAll('.film-frame[data-src]').forEach(frame=>{
     video.setAttribute('aria-label',frame.dataset.title);
     video.addEventListener('error',()=>{
       if(frame.querySelector('.film-error'))return;
-      const error=document.createElement('div');error.className='film-error';error.setAttribute('role','status');error.append('视频暂时无法播放。');
-      const direct=document.createElement('a');direct.href=frame.dataset.src;direct.textContent='直接打开';
-      const retry=document.createElement('button');retry.type='button';retry.textContent='重试';retry.addEventListener('click',()=>{error.remove();video.load();video.play().catch(()=>{})});
+      const labels=({zh:['视频暂时无法播放。','直接打开','重试'],en:['The video could not be played.','Open video','Retry'],ru:['Не удалось воспроизвести видео.','Открыть видео','Повторить']})[document.documentElement?.lang.slice(0,2)||'zh'];
+      const error=document.createElement('div');error.className='film-error';error.setAttribute('role','status');error.append(labels[0]);
+      const direct=document.createElement('a');direct.href=frame.dataset.src;direct.textContent=labels[1];
+      const retry=document.createElement('button');retry.type='button';retry.textContent=labels[2];retry.addEventListener('click',()=>{error.remove();video.load();video.play().catch(()=>{})});
       error.append(direct,retry);frame.append(error);
     });
     frame.replaceChildren(video);video.focus({preventScroll:true});video.play().catch(()=>{video.controls=true});

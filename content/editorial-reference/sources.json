@@ -1,0 +1,69 @@
+{
+  "xiaoli": {
+    "source": "遇见小黎(1).html",
+    "sha256": "1ed80fb7111743c98f403f9b6008f91a6a723d027af6977a5cbaf151645d4518",
+    "assets": []
+  },
+  "hainan": {
+    "source": "海南影像(1).html",
+    "sha256": "77c89b30dda957a516bff4bbc3fcbc6a327de44e2614f7d637d49b566e9d1e99",
+    "assets": [
+      {
+        "path": "/assets/editorial/hainan-1.webp",
+        "sha256": "64a310976e8ee2e05400cc34124c4065418e8210f36e4677e8d853ed59f0d52d"
+      },
+      {
+        "path": "/assets/editorial/hainan-2.webp",
+        "sha256": "575a3906a757e4d17124833cb32ccc41ef802e8f6d58178051629e9e75026f20"
+      },
+      {
+        "path": "/assets/films/C01-cover.webp",
+        "sha256": "1950393b2959de77c8f5ae5ae74f78a56609e8aa39f2c5e1812b58a29d10baf8"
+      },
+      {
+        "path": "/assets/films/Z03-cover.webp",
+        "sha256": "acec88587e18cc686a2706160ed2f2e0fe05f9582c85d256c5c1cccaa1c5e5f7"
+      },
+      {
+        "path": "/assets/films/N01.webp",
+        "sha256": "4211334abae2b10b2f8a999b4df7c7f44834eb79ae5bbab68f2695bd637445c7"
+      },
+      {
+        "path": "/assets/films/N02.webp",
+        "sha256": "963b1182f60eb24ec50732fbc57bd53739abc2a006ec409936318b75c04ac39b"
+      },
+      {
+        "path": "/assets/films/N03.webp",
+        "sha256": "7efc6dd620e802c6b6ca8812dece6a72f78d50d3a81c39238e07184327126afe"
+      },
+      {
+        "path": "/assets/films/M01.webp",
+        "sha256": "9328c63f626799c5bd256848858e334c0be1e99b4a841c5369c2e9f67ef672b8"
+      },
+      {
+        "path": "/assets/films/M03.webp",
+        "sha256": "d688401fa332ae2a578409d025df53716ea2d7b920b0660e494cf59909dea8c2"
+      },
+      {
+        "path": "/assets/films/M04.webp",
+        "sha256": "f9a51b03c2717a9b52731ee79c301d8a539b3fb2026b3f02c09cf751da479de4"
+      },
+      {
+        "path": "/assets/films/M05.webp",
+        "sha256": "0fcd09c6963bfafd5ac37dd755070d816e4e72dc6a9d674b2bfe8ddcb0e67252"
+      },
+      {
+        "path": "/assets/films/M07.webp",
+        "sha256": "782f1e960804ec8a2c5042b9a98894888a2ad2d41d4ced36829162f79738df08"
+      },
+      {
+        "path": "/assets/films/M12.webp",
+        "sha256": "5c95491272df110ffb592e3e7200fc08bf002d410d3f5158b9a8ba0755190985"
+      },
+      {
+        "path": "/assets/films/M15.webp",
+        "sha256": "7fd6d99b71e5f96c96a9a38b7dfb51d88b6e06d0569ead4e2c5277d20519fcf8"
+      }
+    ]
+  }
+}

@@ -31,9 +31,8 @@ for(const language of ['zh','en','ru']){
       assert(main.includes('id="example-journey"'));
     }
     if(route==='xiaoli/'){
-      assert.equal((main.match(/role="tab"/g)||[]).length,3);
-      assert.equal((main.match(/role="tabpanel"/g)||[]).length,3);
-      assert.equal((main.match(/data-open="film"/g)||[]).length,1);
+      assert.equal((main.match(/class="qa reveal"/g)||[]).length,3);
+      for(const id of ['examples','example-0','example-1','example-2'])assert(main.includes('id="'+id+'"'));
     }
   }
 }

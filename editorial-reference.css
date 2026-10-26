@@ -1,0 +1,41 @@
+@font-face{font-family:'Detail Serif';src:url('/assets/fonts/hainan-serif.woff2') format('woff2');font-weight:400 700;font-display:swap}
+/* Preserve the supplied proportions; isolate them from legacy global typography and players. */
+.editorial-page{background:#fbf7f1}
+.editorial-page .detail-reference p{line-height:inherit;text-wrap:wrap}
+.editorial-page .detail-reference :is(h1,h2,h3,h4){text-wrap:wrap}
+.editorial-page .detail-reference .eyebrow{margin-bottom:0}
+.editorial-page .detail-reference .reveal{opacity:1}
+.editorial-page .detail-reference .reveal.reference-pending{opacity:0}
+.editorial-page .detail-reference .reveal.in{animation-fill-mode:both}
+.editorial-page .detail-reference .film-play{width:100%;height:100%;border-radius:0;backdrop-filter:none;color:#f4efe4;transform:none}
+.editorial-page .detail-reference .film-play:before{display:none}
+.editorial-page .detail-reference .film-play:hover{color:#f4efe4;transform:none}
+.editorial-page .detail-reference .film-play .circ{pointer-events:none}
+.editorial-page .detail-reference :is(.dur,.src-badge){pointer-events:none}
+.editorial-page .detail-reference .film-error{position:absolute;inset:auto 12px 12px;padding:10px;background:#08211cee;color:#fff;font-size:13px;border-radius:8px}
+.editorial-page .detail-reference .film-error a{color:#fff;text-decoration:underline}
+.editorial-page .detail-reference .film-error button{color:#fff;background:transparent;text-decoration:underline;margin-left:12px}
+.editorial-page .detail-reference .frame video{object-fit:contain}
+.editorial-page .detail-reference .bubble{animation:none}
+.editorial-page .detail-reference .greeting-avatar{height:100%;box-shadow:var(--shadow-l)}
+.editorial-page .detail-reference .qa-grid,.editorial-page .detail-reference .media-grid,.editorial-page .detail-reference .clip-grid{align-items:stretch}
+.editorial-page .detail-reference .hero-grid>*{min-width:0}
+.editorial-page .detail-reference .qa-top{flex:0 0 auto}
+.editorial-page .detail-reference .qa-step>*{min-width:0}
+.editorial-page .detail-reference .btn-w{min-height:44px}
+.editorial-page:not(:lang(zh)) .detail-reference .hero h1{font-size:clamp(44px,5vw,72px);line-height:1.16;letter-spacing:0}
+.editorial-page:not(:lang(zh)) .detail-reference :is(h1,h2,h3){hyphens:auto;overflow-wrap:anywhere}
+.editorial-page:not(:lang(zh)) .detail-reference .qa-step{grid-template-columns:1fr;gap:4px}
+.editorial-page:not(:lang(zh)) .detail-reference .qa-step .k{white-space:normal}
+.editorial-page:not(:lang(zh)) .detail-reference .src-badge{max-width:calc(100% - 24px);line-height:1.5}
+.editorial-page .detail-reference a:focus-visible,.editorial-page .detail-reference button:focus-visible{outline:2px solid var(--g500);outline-offset:3px}
+@media(max-width:640px){
+ .editorial-page .detail-reference .bubble{left:0}
+ .editorial-page .detail-reference .cta-actions{width:100%;gap:12px}
+ .editorial-page .detail-reference .qa-step{grid-template-columns:1fr;gap:4px}
+ .editorial-page .detail-reference .qa-step .k{white-space:normal}
+}
+@media(prefers-reduced-motion:reduce){
+ .editorial-page .detail-reference .reveal.reference-pending{opacity:1}
+ .editorial-page .detail-reference :is(.qa,.card):hover,.editorial-page .detail-reference .card:hover .poster,.editorial-page .detail-reference .hero-figure:hover .arch img{transform:none}
+}
