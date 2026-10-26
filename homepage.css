@@ -782,13 +782,14 @@ body.home-redesign{--muted:#677b6d}
  .home-redesign .site-header .brand small{font-size:6px;letter-spacing:1px}.home-redesign .site-header .header-tools{gap:10px;margin-left:auto}
  .home-redesign .site-header .header-trial{display:none}.home-redesign .site-header .language select{font-size:11px;max-width:85px}
  .home-redesign .carousel-controls{right:20px;bottom:20px}.home-redesign .journey-carousel .carousel-controls{right:14px;bottom:10px}
- .home-redesign .business-body p,.home-redesign .media-body>p{font-size:12px;line-height:1.8}
+ .home-redesign .business-body p,.home-redesign .media-body>p{font-size:14px;line-height:1.8}
  .home-redesign .business-body{padding:14px 12px}.home-redesign .business-body h3{font-size:18px}
  .home-redesign .assistant-chip,.home-redesign .reply{font-size:13px}.home-redesign .chat-head small,.home-redesign .chat-hint{font-size:11px}
  .home-redesign .chat-response{min-height:290px}.home-redesign .question{font-size:12px}
  .home-redesign .section-head>.text-link{position:static;align-self:center;font-size:12px;margin-top:14px}
  .home-redesign .section-head{flex-direction:column;align-items:center}
- .home-redesign .journey-copy>p,.home-redesign .section-desc{font-size:13px}
+ .home-redesign .journey-copy>p{font-size:14px}
+ .home-redesign .section-desc,.home-redesign .section-head .section-desc{font-size:13px;color:#536b5e}
 }
 @media(prefers-reduced-motion:reduce){.home-redesign *{scroll-behavior:auto!important;transition:none!important;animation:none!important}.home-redesign .hero-media img,.home-redesign .journey-photo img{transform:none}}
 .home-redesign .site-header .header-trial{background:var(--forest);color:white}

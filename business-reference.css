@@ -20,4 +20,11 @@
 .detail-reference.detail-reference .film-error{position:absolute;inset:auto 12px 12px;padding:10px;background:#08211cee;color:#fff;font-size:13px;border-radius:8px}
 .detail-reference.detail-reference .film-error a{color:#fff;text-decoration:underline}
 .detail-reference.detail-reference .film-error button{color:#fff;background:transparent;text-decoration:underline;margin-left:12px}
+@media(max-width:640px){
+ .detail-reference.detail-reference .hero{padding-block:40px 32px}
+ .detail-reference.detail-reference .section{padding-block:40px}
+ .detail-reference.detail-reference .section-head{margin-bottom:28px}
+ .detail-reference.reference-beauty .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:28px}
+ .detail-reference.reference-beauty .filter{min-height:44px;padding:10px 8px}
+}
 @media(prefers-reduced-motion:reduce){.detail-reference.detail-reference .reveal.reference-pending{opacity:1}.detail-reference.detail-reference .card:hover,.detail-reference.detail-reference .pick:hover,.detail-reference.detail-reference .card:hover img,.detail-reference.detail-reference .pick:hover img,.detail-reference.detail-reference .film:hover img.poster,.detail-reference.detail-reference .hero-figure:hover img{transform:none}}

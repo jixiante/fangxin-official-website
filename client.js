@@ -2,9 +2,31 @@ import {isMiniCodeExpired} from './mini-code.js';
 import './xiaoli-greeting.js';
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('#navigation');
-function closeMenu(){menu.setAttribute('aria-expanded','false');nav.classList.remove('open')}
-menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open)});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus()}});
+const header=document.querySelector('#site-header');
+const compactNavigation=window.matchMedia('(max-width:1050px)');
+const menuBackground=document.querySelectorAll('main,.site-footer,.back-to-top,.skip');
+function setMenu(open){
+  menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);
+  document.documentElement.classList.toggle('menu-open',open);
+  document.body.classList.toggle('menu-open',open);
+  menuBackground.forEach(element=>{element.inert=open});
+}
+function closeMenu(){setMenu(false)}
+menu.addEventListener('click',()=>setMenu(compactNavigation.matches&&menu.getAttribute('aria-expanded')!=='true'));
+nav.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu()});
+compactNavigation.addEventListener('change',()=>{
+  if(!compactNavigation.matches){closeMenu();if(document.activeElement===menu)header.querySelector('.brand').focus()}
+});
+document.addEventListener('keydown',event=>{
+  if(menu.getAttribute('aria-expanded')!=='true')return;
+  if(event.key==='Escape'){closeMenu();menu.focus()}
+  if(event.key==='Tab'){
+    const items=[...header.querySelectorAll('a[href],button,select')].filter(element=>element.checkVisibility()&&!element.disabled);
+    const first=items[0],last=items.at(-1);
+    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}
+    else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}
+  }
+});
 document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu()});
 document.querySelector('[data-language]').addEventListener('change',event=>{location.assign(event.target.value+location.hash)});
 let opener;

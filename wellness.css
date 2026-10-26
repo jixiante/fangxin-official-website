@@ -275,8 +275,8 @@
 .wellness-reference .cta-btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
 .wellness-reference .cta-btn span{font-size:16px}
 @media(max-width:900px){.wellness-reference .cta-layout{flex-direction:column;align-items:flex-start}}
-.wellness-reference .family-section{padding-bottom:140px!important}
-.wellness-reference .culture-section{padding-bottom:140px!important}
+.wellness-reference .family-section,.wellness-reference .culture-section{padding-bottom:140px}
+@media(max-width:760px){.wellness-reference .family-section,.wellness-reference .culture-section{padding-bottom:56px}}
 /* Isolate the reference body from existing detail-page typography and player styles. */
 .wellness-reference{--anchor:0px;background:var(--paper)}
 .wellness-reference.wellness-reference :is(h2,h3,h4){font-family:var(--sans);text-wrap:wrap}
