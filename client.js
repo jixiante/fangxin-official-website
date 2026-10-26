@@ -2,9 +2,35 @@ import {isMiniCodeExpired} from './mini-code.js';
 import './xiaoli-greeting.js';
 const menu=document.querySelector('.menu-toggle');
 const nav=document.querySelector('#navigation');
-function closeMenu(){menu.setAttribute('aria-expanded','false');nav.classList.remove('open')}
-menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open)});
-document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menu.getAttribute('aria-expanded')==='true'){closeMenu();menu.focus()}});
+const header=document.querySelector('#site-header');
+const compactNavigation=window.matchMedia('(max-width:1050px)');
+const menuBackground=document.querySelectorAll('main,.site-footer,.back-to-top,.skip');
+nav.inert=compactNavigation.matches;
+function setMenu(open){
+  menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);
+  // The closing panel stays painted for its animation, but must stop accepting focus immediately.
+  nav.inert=compactNavigation.matches&&!open;
+  document.documentElement.classList.toggle('menu-open',open);
+  document.body.classList.toggle('menu-open',open);
+  menuBackground.forEach(element=>{element.inert=open});
+}
+function closeMenu(){setMenu(false)}
+menu.addEventListener('click',()=>setMenu(compactNavigation.matches&&menu.getAttribute('aria-expanded')!=='true'));
+nav.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu()});
+compactNavigation.addEventListener('change',()=>{
+  closeMenu();
+  if(!compactNavigation.matches&&document.activeElement===menu)header.querySelector('.brand').focus();
+});
+document.addEventListener('keydown',event=>{
+  if(menu.getAttribute('aria-expanded')!=='true')return;
+  if(event.key==='Escape'){closeMenu();menu.focus()}
+  if(event.key==='Tab'){
+    const items=[...header.querySelectorAll('a[href],button,select')].filter(element=>element.checkVisibility()&&!element.disabled);
+    const first=items[0],last=items.at(-1);
+    if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus()}
+    else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus()}
+  }
+});
 document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu()});
 document.querySelector('[data-language]').addEventListener('change',event=>{location.assign(event.target.value+location.hash)});
 let opener;
@@ -20,7 +46,14 @@ document.addEventListener('visibilitychange',updateMiniCode);
 document.querySelectorAll('[data-open]').forEach(button=>button.addEventListener('click',()=>{
   updateMiniCode();
   opener=button;closeMenu();const dialog=document.getElementById(button.dataset.open);dialog.showModal();document.body.classList.add('dialog-open');
-  const video=dialog.querySelector('video');if(video&&!video.getAttribute('src')){video.src=video.dataset.src;video.load()}
+  const video=dialog.querySelector('video');
+  if(video&&button.dataset.videoSrc){
+    video.removeAttribute('src');video.dataset.src=button.dataset.videoSrc;video.poster=button.dataset.videoPoster;
+    video.setAttribute('aria-label',button.dataset.videoTitle);dialog.querySelector('h2').textContent=button.dataset.videoTitle;
+    dialog.querySelector('.fineprint').textContent=button.dataset.videoNote;
+    dialog.querySelector(':scope > p:last-child').textContent=button.dataset.videoDescription;
+  }
+  if(video&&!video.getAttribute('src')){video.src=video.dataset.src;video.load()}
 }));
 document.querySelectorAll('dialog').forEach(dialog=>{
   dialog.querySelector('[data-close]').addEventListener('click',()=>dialog.close());

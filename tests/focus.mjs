@@ -24,7 +24,7 @@ for(const language of ['zh','en','ru']){
     }
     if(!route)for(const b of businesses){
       assert(main.includes(`href="/${language}/explore/${b.id}/"`));
-      assert(main.includes(b.overview[language][1].replaceAll('&','&amp;')),`${language}: missing overview`);
+      assert(main.includes(b[language][0].replaceAll('&','&amp;')),'Homepage must retain all eight business names');
     }
     if(route==='explore/wellness/'){
       for(const id of ['rainforest','coast','springs','heritage','fragrance'])assert(main.includes(`id="${id}"`));
@@ -50,7 +50,7 @@ for(const language of ['zh','en','ru']){
   for(const item of businesses.find(b=>b.id==='diet').details[language].slice(0,2)){
     assert(html.includes(`id="${item.id}"`));
     assert(html.includes(item.title.replaceAll('&','&amp;')));
-    assert(html.includes(item.text.replaceAll('&','&amp;')));
+    if(language!=='zh')assert(html.includes(item.text.replaceAll('&','&amp;')));
   }
 }
 const moduleResponse=await fetch((process.env.PREVIEW_URL||'http://localhost:4173')+'/mini-code.js');

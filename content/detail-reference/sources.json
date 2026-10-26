@@ -1,0 +1,366 @@
+{
+  "beauty": {
+    "source": "中医美容.html",
+    "sha256": "d02f9a68a198ccf2d5be69f8c8c3a68a6ed6f63d9574663bcb078539cb3cb79b",
+    "assets": [
+      {
+        "path": "/assets/detail/beauty-background.webp",
+        "sha256": "012faff2d61306c2c0d91c912ad013c00a8f6acc7c1088e5d6491f22c5fb424b"
+      },
+      {
+        "path": "/assets/catalog/beauty-004.webp",
+        "sha256": "11c4a3ce1bf345feb356bb5d3ec92cb234b603c746bfa5007a4be116d9c6ade2"
+      },
+      {
+        "path": "/assets/catalog/beauty-001.webp",
+        "sha256": "58c1ceb1afad92436e04c91fc19b40dd4c8f2c0e3842d8496db5eae514a82598"
+      },
+      {
+        "path": "/assets/catalog/beauty-004.webp",
+        "sha256": "11c4a3ce1bf345feb356bb5d3ec92cb234b603c746bfa5007a4be116d9c6ade2"
+      },
+      {
+        "path": "/assets/catalog/beauty-002.webp",
+        "sha256": "b8f352b0aaa2d6eb9e38ecb907e56e9f0c353952b5c17120c8a48949f330aabf"
+      },
+      {
+        "path": "/assets/catalog/beauty-011.webp",
+        "sha256": "e6134906367869fbfdfaf93bf5bba87462c87ed534af2b9cc633812391945626"
+      },
+      {
+        "path": "/assets/catalog/beauty-020.webp",
+        "sha256": "cddb8ce53d16103d48d45f5ca9b25385bf9115db4feed61947f9a77873313e94"
+      },
+      {
+        "path": "/assets/catalog/beauty-021.webp",
+        "sha256": "6a4661de63c8ab12423d5deaa692b251660534839a129a91d875b0a663db5c6b"
+      },
+      {
+        "path": "/assets/films/M05.webp",
+        "sha256": "0fcd09c6963bfafd5ac37dd755070d816e4e72dc6a9d674b2bfe8ddcb0e67252"
+      },
+      {
+        "path": "/assets/films/M07.webp",
+        "sha256": "782f1e960804ec8a2c5042b9a98894888a2ad2d41d4ced36829162f79738df08"
+      }
+    ],
+    "cards": 6,
+    "films": 2
+  },
+  "nursing": {
+    "source": "中医护理.html",
+    "sha256": "8f6a34c97f4e77702c016cafcff366b04c0ee04eceb9984933921a3eeb560273",
+    "assets": [
+      {
+        "path": "/assets/detail/nursing-background.webp",
+        "sha256": "ad9b6b5cf721ae72f9c32d8263824c0c7a64d48e4c2e7fdb385c3ba40232ba0e"
+      },
+      {
+        "path": "/assets/content-consultation.webp",
+        "sha256": "6ee64eb548453f92db8e71c218285864abab429fef81b6ac9363a097e6d6a442"
+      },
+      {
+        "path": "/assets/catalog/care-033.webp",
+        "sha256": "7fdc258a3aa643724bb6f5b6727cd89256b2e1bc56d6ed9b8bce4305ce5d7f49"
+      },
+      {
+        "path": "/assets/catalog/care-035.webp",
+        "sha256": "e56a247c9e9d1ef0c5e4a1514cd1137f001cd95321e98f291a0076812300f19d"
+      },
+      {
+        "path": "/assets/catalog/care-037.webp",
+        "sha256": "0dd6f32cbc63dcb0a891fd3b84c0b87ba2192c674e73603f1c75a64f8685988d"
+      },
+      {
+        "path": "/assets/catalog/care-046.webp",
+        "sha256": "41e98aaa2c1c63f619cbc4b80329d07a336a631b59e1ec27c3089c2a304a314d"
+      },
+      {
+        "path": "/assets/catalog/care-045.webp",
+        "sha256": "ee1f9e18d6db2234771e37222b890818120fded8917e3a27e7a95460ae3ef00a"
+      },
+      {
+        "path": "/assets/catalog/care-029.webp",
+        "sha256": "ac71bfb2492fd79be87607afbfd880c49fbb28525b01d76e5bd5f1a22993e9dc"
+      },
+      {
+        "path": "/assets/films/M01.webp",
+        "sha256": "9328c63f626799c5bd256848858e334c0be1e99b4a841c5369c2e9f67ef672b8"
+      },
+      {
+        "path": "/assets/films/M04.webp",
+        "sha256": "f9a51b03c2717a9b52731ee79c301d8a539b3fb2026b3f02c09cf751da479de4"
+      },
+      {
+        "path": "/assets/films/M15.webp",
+        "sha256": "7fd6d99b71e5f96c96a9a38b7dfb51d88b6e06d0569ead4e2c5277d20519fcf8"
+      }
+    ],
+    "cards": 6,
+    "films": 3
+  },
+  "diet": {
+    "source": "药膳药饮(1).html",
+    "sha256": "9744a2ce309afdd952233a7052786e0a4c07d9c8e949a88f038158fdaaa140b3",
+    "assets": [
+      {
+        "path": "/assets/detail/selection-background.webp",
+        "sha256": "59750a758aba797c611fb1a62c14a44ad6d06c26099b6ec0b24f359016aed58e"
+      },
+      {
+        "path": "/assets/content-pear-soup.webp",
+        "sha256": "0e2bac80954809e5a92062771630b8a166be81a17339f110928a78b8e3cbe0b4"
+      },
+      {
+        "path": "/assets/catalog/food-001.webp",
+        "sha256": "228976559ff345c529c8993f454d1405643b27b09757aa38a7cc3b0361c3bbc8"
+      },
+      {
+        "path": "/assets/catalog/food-003.webp",
+        "sha256": "e785f33ca006df05300b69c078a2fdfcdad7dc7f3d8095200b93bc234558354d"
+      },
+      {
+        "path": "/assets/catalog/food-004.webp",
+        "sha256": "45f03f5b60bd841793168ebbf10814d587565adba3ea2805260e751cf2706dc0"
+      },
+      {
+        "path": "/assets/catalog/food-010.webp",
+        "sha256": "87a269c256e21847299e7d4c815871b22a5e87b8bea70df4b2fa8465691f0413"
+      },
+      {
+        "path": "/assets/content-pear-soup.webp",
+        "sha256": "0e2bac80954809e5a92062771630b8a166be81a17339f110928a78b8e3cbe0b4"
+      },
+      {
+        "path": "/assets/catalog/food-013.webp",
+        "sha256": "c7c751d88d85d6cb94760afb054e9cc64e530b497ee18ae30a7af525f95cea72"
+      },
+      {
+        "path": "/assets/catalog/food-019.webp",
+        "sha256": "067f6b312b0636a0ad5c93e5c8f1594db775286e6ce1d42f83256b8c22404580"
+      },
+      {
+        "path": "/assets/content-shanlan-tea.webp",
+        "sha256": "0ad6ec32ea75ec8a199f117c97845b83eb63cc7b93796d48586e83888a187554"
+      },
+      {
+        "path": "/assets/catalog/food-039.webp",
+        "sha256": "e9215ef98f1e92fa3079ec92f650594705b6ec046fedcec2f867aed24844e19f"
+      },
+      {
+        "path": "/assets/catalog/food-043.webp",
+        "sha256": "cf2ddc86f9cda9e4aac938741bf97fbfb11f3f6e465cbc89fea2bf0db5075095"
+      },
+      {
+        "path": "/assets/catalog/food-011.webp",
+        "sha256": "1720df43cc247ac8fdeccc92981f7341748490f4743c11faf730cb27118e4a1c"
+      },
+      {
+        "path": "/assets/catalog/food-021.webp",
+        "sha256": "2f582d6afd30d1dd6a05872ab96a49a933f74e9ea8158d39afaae9f52e83b223"
+      },
+      {
+        "path": "/assets/films/Z03-cover.webp",
+        "sha256": "acec88587e18cc686a2706160ed2f2e0fe05f9582c85d256c5c1cccaa1c5e5f7"
+      },
+      {
+        "path": "/assets/films/Z01.webp",
+        "sha256": "3d8126b03e3afa9374421c5ab70ce32b1edf456e5d94b9fb7cb3a1a5d6cc5c4f"
+      }
+    ],
+    "cards": 12,
+    "films": 2
+  },
+  "limiao": {
+    "source": "黎苗特色.html",
+    "sha256": "72fad793d183e4d4076ad25948b05776167b5cc173ab6a02dfad96258ec9ef56",
+    "assets": [
+      {
+        "path": "/assets/detail/limiao-background.webp",
+        "sha256": "88800e9850a2453b4e88fafc2c94aea8c7e08438557d270eb59707f2cf62b0e2"
+      },
+      {
+        "path": "/assets/catalog/care-053.webp",
+        "sha256": "ae5b361e41c6eaddcdc7de37026da57163e0534f976eb48cb20798b17e9f2f34"
+      },
+      {
+        "path": "/assets/catalog/care-053.webp",
+        "sha256": "ae5b361e41c6eaddcdc7de37026da57163e0534f976eb48cb20798b17e9f2f34"
+      },
+      {
+        "path": "/assets/catalog/care-054.webp",
+        "sha256": "21a6cd507868b59a32e1f07a05844ef90a5f7fa263a0cba27002ab09d1847d8c"
+      },
+      {
+        "path": "/assets/catalog/care-055.webp",
+        "sha256": "f627140e58f053ffca97e2e6a3d3c18ca266f15877f2adbb933d5016fb3d63fd"
+      },
+      {
+        "path": "/assets/catalog/care-062.webp",
+        "sha256": "3728ff3fcae9f21ad34fc7c4b04a795a51d5f65dd6d92f49f8b72eed8e5321b1"
+      },
+      {
+        "path": "/assets/catalog/care-063.webp",
+        "sha256": "f53a9457867fa893d173f416d0084fc45e2bea3b6c5c0e2b4ad7bb48cb09817f"
+      },
+      {
+        "path": "/assets/catalog/care-058.webp",
+        "sha256": "02cbb85d5cf78ec4bd79c89abcd28b17639e43d22a5ea8c35a69084d4633491d"
+      },
+      {
+        "path": "/assets/films/N01.webp",
+        "sha256": "4211334abae2b10b2f8a999b4df7c7f44834eb79ae5bbab68f2695bd637445c7"
+      },
+      {
+        "path": "/assets/films/N02.webp",
+        "sha256": "963b1182f60eb24ec50732fbc57bd53739abc2a006ec409936318b75c04ac39b"
+      },
+      {
+        "path": "/assets/films/N03.webp",
+        "sha256": "7efc6dd620e802c6b6ca8812dece6a72f78d50d3a81c39238e07184327126afe"
+      },
+      {
+        "path": "/assets/films/M12.webp",
+        "sha256": "5c95491272df110ffb592e3e7200fc08bf002d410d3f5158b9a8ba0755190985"
+      },
+      {
+        "path": "/assets/films/M03.webp",
+        "sha256": "d688401fa332ae2a578409d025df53716ea2d7b920b0660e494cf59909dea8c2"
+      }
+    ],
+    "cards": 6,
+    "films": 5
+  },
+  "selection": {
+    "source": "精品推荐.html",
+    "sha256": "c9c38a9e2093dbf9ce73f23ab91a72820e1b79a4bc9dc9f89b143663ac9c94d6",
+    "assets": [
+      {
+        "path": "/assets/detail/selection-background.webp",
+        "sha256": "59750a758aba797c611fb1a62c14a44ad6d06c26099b6ec0b24f359016aed58e"
+      },
+      {
+        "path": "/assets/detail/selection-hero.webp",
+        "sha256": "1f56ceddae8caceb78ea9469f35cd5d37783035cbddbabedbce79d326a25b526"
+      },
+      {
+        "path": "/assets/content-pear-soup.webp",
+        "sha256": "0e2bac80954809e5a92062771630b8a166be81a17339f110928a78b8e3cbe0b4"
+      },
+      {
+        "path": "/assets/content-shanlan-tea.webp",
+        "sha256": "0ad6ec32ea75ec8a199f117c97845b83eb63cc7b93796d48586e83888a187554"
+      },
+      {
+        "path": "/assets/catalog/food-001.webp",
+        "sha256": "228976559ff345c529c8993f454d1405643b27b09757aa38a7cc3b0361c3bbc8"
+      },
+      {
+        "path": "/assets/catalog/food-011.webp",
+        "sha256": "1720df43cc247ac8fdeccc92981f7341748490f4743c11faf730cb27118e4a1c"
+      },
+      {
+        "path": "/assets/catalog/incense-29.webp",
+        "sha256": "8c4668b02ec3d3cdd08a9a5bdad30aedfd822ad9f289acfc41bb27b3425c522b"
+      },
+      {
+        "path": "/assets/catalog/incense-28.webp",
+        "sha256": "42572a73ac5d222fd1130726792f1d919e4ed5f4676b8586979d11623921f8a4"
+      },
+      {
+        "path": "/assets/wellness-focus.webp",
+        "sha256": "0ab005007d00ec56724bbca207a827347618bb505a1fbf69253b708b61bc07ea"
+      },
+      {
+        "path": "/assets/catalog/incense-28.webp",
+        "sha256": "42572a73ac5d222fd1130726792f1d919e4ed5f4676b8586979d11623921f8a4"
+      }
+    ],
+    "cards": 0,
+    "films": 0
+  },
+  "training": {
+    "source": "技能培训.html",
+    "sha256": "2e07709118f85b0aa1bdbf5c179928d1ae2d9f70c17e2dd6bc7aab863c797161",
+    "assets": [
+      {
+        "path": "/assets/detail/training-background.webp",
+        "sha256": "824e98d814c4a62ead033ee445fcf82284d740827703e9e0170ca9820d4541d2"
+      },
+      {
+        "path": "/assets/detail/training-hero.webp",
+        "sha256": "13bb105875460c49a859e181155e2b9fced25c1e785012fe67f7c5d3d7046ced"
+      },
+      {
+        "path": "/assets/catalog/care-029.webp",
+        "sha256": "ac71bfb2492fd79be87607afbfd880c49fbb28525b01d76e5bd5f1a22993e9dc"
+      },
+      {
+        "path": "/assets/catalog/care-037.webp",
+        "sha256": "0dd6f32cbc63dcb0a891fd3b84c0b87ba2192c674e73603f1c75a64f8685988d"
+      },
+      {
+        "path": "/assets/catalog/care-033.webp",
+        "sha256": "7fdc258a3aa643724bb6f5b6727cd89256b2e1bc56d6ed9b8bce4305ce5d7f49"
+      },
+      {
+        "path": "/assets/films/M03.webp",
+        "sha256": "d688401fa332ae2a578409d025df53716ea2d7b920b0660e494cf59909dea8c2"
+      },
+      {
+        "path": "/assets/films/M12.webp",
+        "sha256": "5c95491272df110ffb592e3e7200fc08bf002d410d3f5158b9a8ba0755190985"
+      }
+    ],
+    "cards": 8,
+    "films": 2
+  },
+  "incense": {
+    "source": "沉香生活.html",
+    "sha256": "25c92f17931a7029ee90c8bf289a555a3da69f2aa4e9170ce803acfc4ee9bf6b",
+    "assets": [
+      {
+        "path": "/assets/detail/incense-background.webp",
+        "sha256": "a70c2f1fd808570223a5a09d7b4f2edafed1f58c22babb74d24c91cfc1384363"
+      },
+      {
+        "path": "/assets/incense.webp",
+        "sha256": "c7f2bc1fb0031248952e0f4bd2e5c104dfc162edfce32a420e8572da74db78c1"
+      },
+      {
+        "path": "/assets/catalog/incense-13.webp",
+        "sha256": "db7f3fb94a9754d12a8a81b6f97e2fe1c3e0da3f6efc52a12f1590fdaf8ade12"
+      },
+      {
+        "path": "/assets/catalog/incense-3.webp",
+        "sha256": "fc11e6d1d0cdd63672d0105bf537cca9e04cca3e5f9e492085a8d55f5874903b"
+      },
+      {
+        "path": "/assets/catalog/incense-14.webp",
+        "sha256": "79bbd3a6276dfe89c005e4abb3c5b171b889630102601d81fa4f9e59bc2b4dd9"
+      },
+      {
+        "path": "/assets/catalog/incense-29.webp",
+        "sha256": "8c4668b02ec3d3cdd08a9a5bdad30aedfd822ad9f289acfc41bb27b3425c522b"
+      },
+      {
+        "path": "/assets/catalog/incense-34.webp",
+        "sha256": "8133780f7a5c213fcf2a21d2f3db90b6770ac7486c88b111a20ca174ddd6fccb"
+      },
+      {
+        "path": "/assets/catalog/incense-28.webp",
+        "sha256": "42572a73ac5d222fd1130726792f1d919e4ed5f4676b8586979d11623921f8a4"
+      },
+      {
+        "path": "/assets/films/C01-cover.webp",
+        "sha256": "1950393b2959de77c8f5ae5ae74f78a56609e8aa39f2c5e1812b58a29d10baf8"
+      },
+      {
+        "path": "/assets/films/C03.webp",
+        "sha256": "56f62aca85d32f37f9056beffdb85f884d0630e379026d031390eaae29f7da73"
+      }
+    ],
+    "cards": 6,
+    "films": 2
+  }
+}

@@ -1,0 +1,30 @@
+@font-face{font-family:'Detail Serif';src:url('/assets/fonts/hainan-serif.woff2') format('woff2');font-weight:400 700;font-display:swap}
+/* Integration resets only: page-specific proportions and effects live with the supplied reference. */
+.detail-reference-page{background:#fbf7f1}
+.detail-reference.detail-reference p{line-height:inherit;text-wrap:wrap}
+.detail-reference.detail-reference :is(h1,h2,h3,h4){text-wrap:wrap}
+.detail-reference.detail-reference .eyebrow{margin-bottom:0}
+.detail-reference.detail-reference .film-play{width:auto;height:auto;border-radius:0;backdrop-filter:none;color:#f4efe4;transform:none}
+.detail-reference.detail-reference .film-play:before{display:none}
+.detail-reference.detail-reference .film-play:hover{color:#f4efe4;transform:none}
+.detail-reference.detail-reference .film-play .circ{pointer-events:none}
+.detail-reference.detail-reference .film-meta{margin-bottom:0;font-size:inherit;color:inherit}
+.detail-reference.detail-reference .reveal{opacity:1}
+.detail-reference.detail-reference .reveal.reference-pending{opacity:0}
+.detail-reference.detail-reference .reveal.in{animation-fill-mode:both}
+.detail-reference.detail-reference [id]{scroll-margin-top:120px}
+.detail-reference.detail-reference .lightbox{width:min(92vw,880px);max-height:calc(100dvh - 112px);overflow:visible;box-shadow:none;outline:none}
+.detail-reference.detail-reference .lightbox img{max-height:calc(100dvh - 112px);object-fit:contain}
+.detail-reference.detail-reference .lightbox .x{width:44px;height:44px;display:grid;place-items:center}
+.detail-reference.detail-reference .lightbox .lb-cap{display:block}
+.detail-reference.detail-reference .film-error{position:absolute;inset:auto 12px 12px;padding:10px;background:#08211cee;color:#fff;font-size:13px;border-radius:8px}
+.detail-reference.detail-reference .film-error a{color:#fff;text-decoration:underline}
+.detail-reference.detail-reference .film-error button{color:#fff;background:transparent;text-decoration:underline;margin-left:12px}
+@media(max-width:640px){
+ .detail-reference.detail-reference .hero{padding-block:40px 32px}
+ .detail-reference.detail-reference .section{padding-block:40px}
+ .detail-reference.detail-reference .section-head{margin-bottom:28px}
+ .detail-reference.reference-beauty .filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-bottom:28px}
+ .detail-reference.reference-beauty .filter{min-height:44px;padding:10px 8px}
+}
+@media(prefers-reduced-motion:reduce){.detail-reference.detail-reference .reveal.reference-pending{opacity:1}.detail-reference.detail-reference .card:hover,.detail-reference.detail-reference .pick:hover,.detail-reference.detail-reference .card:hover img,.detail-reference.detail-reference .pick:hover img,.detail-reference.detail-reference .film:hover img.poster,.detail-reference.detail-reference .hero-figure:hover img{transform:none}}

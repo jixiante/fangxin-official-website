@@ -2549,7 +2549,7 @@ export const featuredFacts={
 };
 export const selectionReasons={
  "zh": {
-  "pear-soup": "想从甜汤开始，可以看百合、雪梨、银耳与冰糖的组合；配料与盒装规格都能展开查看。",
+  "pear-soup": "想从甜汤开始，可以看百合、雪梨、银耳与冰糖的组合；配料与盒装规格都能直接查看。",
   "shanlan-tea": "想认识海南地方食材，可以从山兰米入手，同时看到它与枸杞、桂圆、益智仁、虎奶菇的搭配。",
   "goji-ribs": "想比较咸汤的用料，这款用枸杞、菊花与排骨组合，和豆类、芋头汤形成区别。",
   "sour-plum": "想找饮品类内容，可看乌梅、陈皮、山楂、冰糖四种配料构成的传统酸梅饮。",
@@ -2559,7 +2559,7 @@ export const selectionReasons={
   "incense-craft": "想亲手做一件作品，可查看香珠课程的选材、研磨、和泥、搓珠与串珠过程，以及半天的课程安排。"
  },
  "en": {
-  "pear-soup": "Start with a sweet soup combining lily bulb, pear, tremella and rock sugar; expand the ingredients and listed pack size.",
+  "pear-soup": "Start with a sweet soup combining lily bulb, pear, tremella and rock sugar; view the ingredients and listed pack size.",
   "shanlan-tea": "Discover a Hainan ingredient through Shanlan rice and its pairing with goji, longan, yizhi and tiger milk mushroom.",
   "goji-ribs": "Compare savoury soups through this combination of goji, chrysanthemum and ribs, distinct from the bean-and-taro soup.",
   "sour-plum": "Explore a traditional drink through four ingredients: smoked plum, citrus peel, hawthorn and rock sugar.",
@@ -2569,7 +2569,7 @@ export const selectionReasons={
   "incense-craft": "For making an object yourself, explore the half-day bead course from selecting and grinding materials to kneading, rolling and stringing."
  },
  "ru": {
-  "pear-soup": "Начните со сладкого супа с лилией, грушей, тремеллой и сахаром; можно раскрыть состав и размер упаковки.",
+  "pear-soup": "Начните со сладкого супа с лилией, грушей, тремеллой и сахаром; состав и размер упаковки указаны в карточке.",
   "shanlan-tea": "Познакомьтесь с местным рисом шаньлань и его сочетанием с годжи, лонганом, альпинией ицзы и грибом «тигриное молоко».",
   "goji-ribs": "Сравните мясные супы: здесь годжи и хризантема сочетаются с рёбрышками, в отличие от варианта с бобами и таро.",
   "sour-plum": "Традиционный напиток из четырёх ингредиентов: копчёной сливы, цедры, боярышника и леденцового сахара.",

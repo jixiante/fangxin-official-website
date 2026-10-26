@@ -24,11 +24,11 @@ required={ord(c) for c in ''.join(text.parts) if not c.isspace()}
 # Keep common Latin and Cyrillic ranges in addition to every current page character.
 wanted=required|set(range(32,592))|set(range(1024,1328))|{0x20ac,0x2197,0x2193,0x25b7,0x2630}
 report={}
-for name,family,maxweight in [('notosanssc','sans',600),('notosans','international',600)]:
+for name,family,maxweight in [('notosanssc','sans',600),('notosans','international',600),('notoserifsc','serif',700)]:
     source=next(SOURCE.glob(name+'-*.ttf'))
     font=TTFont(source)
     cmap=font.getBestCmap()
-    family_required=required if family=='sans' else {c for c in required if c<0x3000}
+    family_required=required if family in ['sans','serif'] else {c for c in required if c<0x3000}
     missing=family_required-set(cmap)
     # Symbol-only fallbacks are intentional; all text alphabets must be covered.
     missing_text=[c for c in missing if chr(c).isalnum()]

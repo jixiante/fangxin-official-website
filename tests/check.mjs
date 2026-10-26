@@ -7,7 +7,7 @@ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../dist');
 const routes=JSON.parse(await readFile(path.join(root,'routes.json'),'utf8'));
 let references=0;
 const coverage=JSON.parse(await readFile(path.join(root,'assets/fonts/coverage.json'),'utf8'));
-for(const family of ['sans','international'])assert.equal(createHash('sha256').update(await readFile(path.join(root,`assets/fonts/hainan-${family}.woff2`))).digest('hex'),coverage[family].woff2_sha256,'Font coverage must match the actual font');
+for(const family of ['sans','international','serif'])assert.equal(createHash('sha256').update(await readFile(path.join(root,`assets/fonts/hainan-${family}.woff2`))).digest('hex'),coverage[family].woff2_sha256,'Font coverage must match the actual font');
 for(const route of routes){
   const html=await readFile(path.join(root,route,'index.html'),'utf8');
   assert(html.includes('<main id="main">'),route);

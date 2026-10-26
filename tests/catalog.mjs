@@ -23,8 +23,11 @@ for(const lang of ['zh','en','ru']){
    assert(html.includes(`id="${item.id}"`),`Lost content destination: ${lang}/${item.id}`);
    assert(item.facts[lang]?.length===item.facts.zh.length,`Missing translated details: ${lang}/${item.id}`);
    const article=html.split(`id="${item.id}"`)[1].split('</article>')[0];
-   assert(article.includes('<details class="catalog-details"><summary>'),`No native disclosure: ${lang}/${item.id}`);
-   for(const [label,value] of item.facts[lang])assert(article.includes(value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')),`Detail dropped by shared renderer: ${lang}/${item.id}/${label}`);
+   // Chinese detail copy now follows the supplied HTML; source records and translations remain intact.
+   if(lang==='zh'){assert(article.includes('class="specs"'),`No reference specifications: ${item.id}`);continue;}
+   assert(article.includes('<dl class="catalog-facts">'),`No visible facts: ${lang}/${item.id}`);
+   const articleText=article.replace(/<[^>]+>/g,'');
+   for(const [label,value] of item.facts[lang])assert(articleText.includes(value.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;')),`Detail dropped by shared renderer: ${lang}/${item.id}/${label}`);
   }
  }
  const wellness=await readFile(new URL(`../dist/${lang}/explore/wellness/index.html`,import.meta.url),'utf8');
@@ -34,10 +37,12 @@ for(const lang of ['zh','en','ru']){
   assert(!article.includes('<a '),`Route still leads to unrelated content: ${route.id}`);
  }
  const diet=await readFile(new URL(`../dist/${lang}/explore/diet/index.html`,import.meta.url),'utf8');
- for(const id of Object.keys(featuredFacts))assert(diet.split(`id="${id}"`)[1].split('</article>')[0].includes('<dl>'),`Lost exact-food details: ${id}`);
+ for(const id of Object.keys(featuredFacts))assert(diet.split(`id="${id}"`)[1].split('</article>')[0].includes(lang==='zh'?'class="specs"':'<dl class="catalog-facts">'),`Lost exact-food details: ${id}`);
  const selection=await readFile(new URL(`../dist/${lang}/explore/selection/index.html`,import.meta.url),'utf8');
  assert.equal(Object.keys(selectionReasons[lang]).length,8);
- assert(selection.includes(selectionReasons[lang]['rainforest-route']),`Selection lost reason: ${lang}`);
+ if(lang!=='zh')assert(selection.includes(selectionReasons[lang]['rainforest-route']),`Selection lost reason: ${lang}`);
+ assert.equal((selection.match(lang==='zh'?/data-zoom=""/g:/class="catalog-media detail-image-trigger"/g)||[]).length,8,'Every recommendation image opens separately');
+ assert.equal((selection.match(/class="pick-go"/g)||[]).length,8,'Every recommendation has its own detail link');
  const hainan=await readFile(new URL(`../dist/${lang}/hainan/index.html`,import.meta.url),'utf8');
  for(const f of films)assert(hainan.includes(`src="${f.video}"`),`External-only film: ${lang}/${f.id}`);
 }
@@ -49,10 +54,14 @@ for(const [page,id,zh,en,ru] of [['incense','incense-sticks','楠木粉','nanmu'
 const provenance=JSON.parse(await readFile(new URL('../content/material-sources.json',import.meta.url))).substance_revision;
 for(const item of [...Object.values(catalog).flat(),...routeIdeas,...Object.values(featuredFacts)])for(const ref of item.source.split(';'))assert(provenance.rows.some(row=>row.ref===ref&&row.line>0&&row.sha256),`Unresolved source row: ${ref}`);
 const base=process.env.PREVIEW_URL||'http://localhost:4173';
+for(const asset of ['film-badge.svg','clock.svg']){
+ const response=await fetch(base+'/assets/detail/'+asset);
+ assert.equal(response.status,200);assert.equal(response.headers.get('content-type'),'image/svg+xml');
+}
 for(const f of films){
  assert(f.seconds>0&&f.poster&&f.zh.title&&f.en.title&&f.ru.title,f.id);
  const range=await fetch(base+f.video,{headers:{Range:'bytes=0-63'}});
  assert.equal(range.status,206,f.id);assert.equal(range.headers.get('content-type'),'video/mp4');
  assert.deepEqual(Buffer.from(await range.arrayBuffer()),(await readFile(new URL('../dist'+f.video,import.meta.url))).subarray(0,64),f.id);
 }
-console.log(`PASS: source-resolved ingredients, tools and curricula in zh/en/ru; native details retain every translated field; route cards contain their own four-part itinerary; exact-food and selection destinations retained; ${films.length} native films return correct ranges.`);
+console.log(`PASS: source-resolved ingredients, tools and curricula in zh/en/ru; Chinese reference specifications and complete English/Russian source fields; route cards contain their own four-part itinerary; exact-food and selection destinations retained; ${films.length} native films return correct ranges.`);

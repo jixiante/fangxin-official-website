@@ -1,0 +1,60 @@
+/* Unified site footer shared by all pages; partners page uses a contact-focused variant. */
+.site-footer{padding-top:0;background:#1a4835;color:#ddf5eb}
+.site-footer .wrap{width:min(1280px,calc(100% - 96px));margin-inline:auto}
+.footer-top{padding:58px 0 40px;display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:70px}
+.site-footer .brand{display:inline-flex;align-items:center;gap:12px;color:inherit}
+.site-footer .brand img{width:56px;height:56px;object-fit:contain}
+.site-footer .brand b{display:block;font-size:20px;color:#e5f7f0;font-weight:600}
+.site-footer .brand small{display:block;font-size:9px;font-weight:500;letter-spacing:2px;color:#6daf94;line-height:1.6;margin-top:4px}
+.footer-brand>p{font-size:12px;line-height:2;color:#98c3b2;margin-top:20px}
+.footer-label{font-size:13px;font-weight:700;color:#cfefe2;margin:6px 0 22px}
+.footer-nav{display:grid;grid-template-columns:1fr 1fr;gap:12px 25px;font-size:12px;color:#a6d1c0}
+.footer-nav a{color:inherit;text-decoration:none;padding-block:0;border:0}
+.footer-nav a:is(:hover,:focus-visible){color:#e9f6ee}
+.footer-contact>b{font-size:13px;color:#b9dfd0;font-weight:600}
+.footer-contact>p{font-size:11px;color:#98c3b2;margin-top:6px}
+.footer-contact>a{display:inline-block;font-size:11px;color:#bce7d5;margin-top:20px;padding-bottom:4px;border-bottom:1px solid #55967b}
+.footer-bottom{padding:17px 0;border-top:1px solid #ffffff12;display:flex;justify-content:space-between;gap:25px;font-size:10px;color:#66a28a}
+.footer-bottom>div{display:flex;gap:24px;flex-wrap:wrap}
+.footer-bottom a{color:inherit}
+/* Partners footer: direct contact channels, distinct from the unified footer. */
+.partners-footer .contact-lines{display:grid;gap:13px;margin-top:18px}
+.partners-footer .contact-lines a{display:flex;flex-direction:column;gap:2px;font-size:13px;color:#bce7d5;text-decoration:none;line-height:1.5}
+.partners-footer .contact-lines a small{font-size:10px;color:#77af98}
+.partners-footer .contact-lines a:is(:hover,:focus-visible){color:#fff}
+.partners-footer .footer-cta{margin-top:22px;display:inline-flex;align-items:center;justify-content:center;gap:8px;background:#d1e7bf;color:#103d2f;padding:12px 20px;border-radius:6px;font-size:14px;font-weight:600;text-decoration:none;line-height:1.5;transition:background .18s}
+.partners-footer .footer-cta:is(:hover,:focus-visible){background:#e3efd9;color:#103d2f}
+body:not(:lang(zh)) .site-footer .brand b{white-space:normal;font-size:18px;letter-spacing:0;line-height:1.4}
+body:not(:lang(zh)) .site-footer .brand small{font-size:8px;letter-spacing:1px}
+body:not(:lang(zh)) .footer-contact>a{white-space:normal}
+body:not(:lang(zh)) .footer-top{grid-template-columns:1.3fr 1fr 1fr;gap:40px}
+@media(max-width:1250px){
+.site-footer .wrap{width:calc(100% - 64px)}
+.footer-top{gap:45px}}
+@media(max-width:1050px){
+.footer-top{grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+.site-footer .brand b{font-size:17px}
+.site-footer .brand img{width:45px;height:45px}
+.footer-contact>b{font-size:12px}
+.footer-contact>p{font-size:10px}
+.footer-nav{font-size:11px;gap:11px 18px}
+.footer-bottom{font-size:9px}
+.footer-bottom>div{gap:15px}}
+@media(max-width:760px){
+.site-footer .wrap{width:calc(100% - 40px)}
+.footer-top{display:grid;grid-template-columns:1fr 1fr;gap:26px 24px;padding:30px 0 23px}
+.footer-brand{grid-column:1/-1;display:block;max-width:none}
+.footer-brand img{margin:0}
+.site-footer .brand{max-width:none}
+.site-footer .brand b{font-size:18px}
+.site-footer .brand img{height:47px;width:47px}
+.site-footer .brand small{font-size:8px;letter-spacing:1.4px}
+.footer-brand>p{font-size:11px;margin-top:12px;line-height:1.9}
+.footer-label{font-size:12px;margin:0 0 13px}
+.footer-nav{gap:10px 10px;font-size:10px}
+.footer-contact>b{font-size:11px;line-height:1.8;display:block}
+.footer-contact>p{font-size:10px;line-height:1.9;max-width:160px;margin-top:8px}
+.footer-contact>a{font-size:9px;margin-top:12px;line-height:1.9}
+.footer-bottom{display:block;font-size:8px;line-height:1.9;padding:15px 0}
+.footer-bottom>div{gap:19px;margin-top:9px;font-size:9px;flex-wrap:wrap}
+.partners-footer .contact-lines a{font-size:12px}}

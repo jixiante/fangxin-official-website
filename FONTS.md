@@ -1,5 +1,11 @@
 # 字体与排版 · 2026-10-15
 
+## 2026-10-23 详情页参考补齐
+
+八个业务详情页标题使用本地 Noto Serif SC（思源宋体），400–700 字重；导航及正文继续使用现有无衬线字体。原始文件从 Google Fonts 官方 `ofl/notoserifsc/NotoSerifSC[wght].ttf` 获取，SHA-256 为 `050080d9255a86808f2945bffac582b31ef32bc36411ce29563b4961670c66f9`，许可证随站点保存在 `assets/fonts/notoserifsc-OFL.txt`。子集约 353 KB，只在业务详情页预加载，支持中英俄字符；当前哈希与覆盖记录见 `assets/fonts/coverage.json`。
+
+`tools/prepare-fonts.py` 现同时生成三套字体，原件目录另外需要 `notoserifsc-*.ttf` 与 `notoserifsc-OFL.txt`。下文是此前版本记录。
+
 中文使用本地 **Noto Sans SC**，英文/俄文使用本地 **Noto Sans**；中文品牌名和西文字体没有的符号回退到 Noto Sans SC。两套均为已有授权原件，不使用 Apple SF 或外部字体 CDN。标题 600、正文 400，界面 400–600，禁止合成粗体。
 
 ## 来源与许可
