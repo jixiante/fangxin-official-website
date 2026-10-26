@@ -44,7 +44,9 @@ for(const lang of ['zh','en','ru']){
  assert.equal((selection.match(lang==='zh'?/data-zoom=""/g:/class="catalog-media detail-image-trigger"/g)||[]).length,8,'Every recommendation image opens separately');
  assert.equal((selection.match(/class="pick-go"/g)||[]).length,8,'Every recommendation has its own detail link');
  const hainan=await readFile(new URL(`../dist/${lang}/hainan/index.html`,import.meta.url),'utf8');
- for(const f of films)assert(hainan.includes(`src="${f.video}"`),`External-only film: ${lang}/${f.id}`);
+ const referenceFilms=['C01','Z03','N01','N02','N03','M01','M03','M04','M05','M07','M12','M15'];
+ assert.equal((hainan.match(/class="frame film-frame"/g)||[]).length,referenceFilms.length);
+ for(const id of referenceFilms)assert(hainan.includes(`data-src="/assets/films/${id}.mp4"`),`Missing reference film: ${lang}/${id}`);
 }
 // These source-backed facts distinguish the new content from the former generic summaries.
 for(const [page,id,zh,en,ru] of [['incense','incense-sticks','楠木粉','nanmu','наньму'],['beauty','herbal-mask','珍珠粉','pearl','жемчуг'],['nursing','ear-care','王不留行籽','Vaccaria','ваккарии'],['limiao','five-element-cups','贝壳粉','shell powder','ракушечным'],['diet','yizhi-drink','葛根','kudzu','кудзу'],['training','gua-sha-training','个案报告','report','отчёт']]){
