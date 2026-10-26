@@ -5,8 +5,11 @@ const nav=document.querySelector('#navigation');
 const header=document.querySelector('#site-header');
 const compactNavigation=window.matchMedia('(max-width:1050px)');
 const menuBackground=document.querySelectorAll('main,.site-footer,.back-to-top,.skip');
+nav.inert=compactNavigation.matches;
 function setMenu(open){
   menu.setAttribute('aria-expanded',String(open));nav.classList.toggle('open',open);
+  // The closing panel stays painted for its animation, but must stop accepting focus immediately.
+  nav.inert=compactNavigation.matches&&!open;
   document.documentElement.classList.toggle('menu-open',open);
   document.body.classList.toggle('menu-open',open);
   menuBackground.forEach(element=>{element.inert=open});
@@ -15,7 +18,8 @@ function closeMenu(){setMenu(false)}
 menu.addEventListener('click',()=>setMenu(compactNavigation.matches&&menu.getAttribute('aria-expanded')!=='true'));
 nav.addEventListener('click',event=>{if(event.target.closest('a'))closeMenu()});
 compactNavigation.addEventListener('change',()=>{
-  if(!compactNavigation.matches){closeMenu();if(document.activeElement===menu)header.querySelector('.brand').focus()}
+  closeMenu();
+  if(!compactNavigation.matches&&document.activeElement===menu)header.querySelector('.brand').focus();
 });
 document.addEventListener('keydown',event=>{
   if(menu.getAttribute('aria-expanded')!=='true')return;
