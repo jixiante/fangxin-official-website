@@ -20,6 +20,9 @@
 .editorial-page .detail-reference .greeting-avatar{height:100%;box-shadow:var(--shadow-l)}
 .editorial-page .detail-reference .qa-grid,.editorial-page .detail-reference .media-grid,.editorial-page .detail-reference .clip-grid{align-items:stretch}
 .editorial-page .detail-reference .hero-grid>*{min-width:0}
+/* The approved artwork includes its own arch and decorative rings. */
+.editorial-page .editorial-hainan .hero-artwork{aspect-ratio:1238/1271}
+.editorial-page .editorial-hainan .hero-artwork img{width:100%;height:auto}
 .editorial-page .detail-reference .qa-top{flex:0 0 auto}
 .editorial-page .detail-reference .qa-step>*{min-width:0}
 .editorial-page .detail-reference .btn-w{min-height:44px}

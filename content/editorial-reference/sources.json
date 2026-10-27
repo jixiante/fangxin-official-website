@@ -63,6 +63,11 @@
       {
         "path": "/assets/films/M15.webp",
         "sha256": "7fd6d99b71e5f96c96a9a38b7dfb51d88b6e06d0569ead4e2c5277d20519fcf8"
+      },
+      {
+        "path": "/assets/editorial/hainan-portrait.webp",
+        "source": "User-approved image, 2026-10-27; replaces the Hainan hero photograph",
+        "sha256": "b9b91a9b210afe6c13a7a860d79577a961931822dd8827dc42e7514aa9e21b92"
       }
     ]
   }
