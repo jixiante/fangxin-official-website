@@ -28,9 +28,15 @@ menu.events.click();media.matches=false;media.change();assert(!nav.classes.size)
 menu.events.click();assert.equal(menu.attributes['aria-expanded'],'false','Desktop must not open the compact panel');
 assert.equal(nav.inert,false,'Desktop navigation remains interactive');
 media.matches=true;media.change();assert.equal(nav.inert,true,'Returning to compact layout hides its links');
+const subToggle=element();subToggle.setAttribute('aria-expanded','false');
+const subCode=source.slice(source.indexOf("const subToggle="),source.indexOf('let opener;'));
+runInNewContext(subCode,{nav:{querySelector:()=>subToggle},document:{documentElement:{classList:{add(){}}}}});
+subToggle.events.click();assert.equal(subToggle.getAttribute('aria-expanded'),'true','Business submenu opens');
+subToggle.events.click();assert.equal(subToggle.getAttribute('aria-expanded'),'false','Business submenu closes');
 for(const language of ['zh','en','ru']){
  const html=await readFile(new URL(`../dist/${language}/index.html`,import.meta.url),'utf8');
  assert(html.indexOf('class="menu-toggle"')<html.indexOf('class="brand"'),'Menu precedes brand for matching keyboard and visual order');
  assert(html.includes('class="trial-icon"'));assert(/class="header-trial"[^>]*aria-label=/.test(html));
+ assert(html.includes('aria-controls="business-submenu"')&&html.includes('id="business-submenu"'));
 }
 console.log('PASS: compact navigation scroll lock, background focus isolation, keyboard loop, Escape, links and desktop resize cleanup.');

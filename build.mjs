@@ -114,13 +114,19 @@ for(const l of languages){
     }
     const redesignedHome=!route;
     if(redesignedHome){body=localizeHome(homepage,l).replace('<!--HOME_EXAMPLES-->',homeAnswers(l));description=homeText('放心中醫藥在海南：发现海南中医药文化、康养主题与草本生活。',l);}
+    if(business&&(l==='zh'||business.id==='wellness')){
+      const suggestions={wellness:['diet','limiao'],beauty:['nursing','diet'],nursing:['beauty','wellness'],diet:['wellness','incense'],incense:['limiao','selection'],limiao:['incense','wellness'],training:['limiao','nursing'],selection:['diet','incense']}[business.id];
+      const heading={zh:'继续探索',en:'Continue exploring',ru:'Продолжить знакомство'}[l];
+      body+=`<section class="related-journeys"><div class="wrap"><h2>${esc(heading)}</h2><div class="related-journeys-links">${suggestions.map(id=>{const item=businesses.find(x=>x.id===id);return `<a href="${url('explore/'+id)}">${esc(item[l][0])}<span aria-hidden="true">↗</span></a>`}).join('')}</div></div></section>`;
+    }
     description=({explore:t.businessText,xiaoli:f.xPageText,hainan:t.islandText,news:t.newsText,about:f.about[1],partners:t.partnerText,privacy:t.privacyText})[route]||description;
     const navRoutes=['','explore','xiaoli','hainan','news','about','partners'];
     const nav=navRoutes.map((r,i)=>{
       const current=route===r||(r&&route.startsWith(r+'/'))?' aria-current="page"':'';
       if(r!=='explore')return `<a href="${url(r)}"${current}>${esc(t.nav[i])}</a>`;
       const subs=businesses.map(b=>`<a href="${url('explore/'+b.id)}">${esc(b[l][0])}</a>`).join('');
-      return `<div class="nav-item has-sub"><a href="${url(r)}"${current}>${esc(t.nav[i])}</a><div class="nav-sub">${subs}</div></div>`;
+      const expandLabel={zh:'展开或收起八项业务',en:'Expand or collapse services',ru:'Развернуть или свернуть направления'}[l];
+      return `<div class="nav-item has-sub"><a href="${url(r)}"${current}>${esc(t.nav[i])}</a><button class="nav-sub-toggle" type="button" aria-expanded="false" aria-controls="business-submenu" aria-label="${esc(expandLabel)}"><span aria-hidden="true"></span></button><div class="nav-sub" id="business-submenu">${subs}</div></div>`;
     }).join('');
     let header=`<a class="skip" href="#main">${esc(t.skip)}</a><header class="site-header" id="site-header"><div class="header-inner"><button class="menu-toggle" aria-expanded="false" aria-controls="navigation">${esc(t.menu)} <span class="menu-lines" aria-hidden="true"></span></button><a class="brand" href="${url('')}" aria-label="${esc(site.brand)}"><img src="/assets/logo-small.webp" alt="" width="64" height="64"><span><b lang="zh-CN">${esc(site.brand)}</b></span></a><nav id="navigation" aria-label="${esc(t.menu)}">${nav}</nav><div class="header-tools"><label class="language"><span class="sr-only">Language / 语言 / Язык</span><select aria-label="Language / 语言 / Язык" data-language>${languages.map(code=>`<option value="/${code}/${route?route+'/':''}" ${code===l?'selected':''}>${locales[code].name}</option>`).join('')}</select></label><button class="header-trial" type="button" data-open="mini" aria-label="${esc(t.experience)}"><span class="trial-full">${esc(t.experience)}</span><span class="trial-short">${esc(f.trialShort)}</span><svg class="trial-icon" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><path d="M17.5 14v7M14 17.5h7"/></svg></button></div></div></header>${t.brandTranslation?`<div class="brand-translation wrap">${esc(t.brandTranslation)}</div>`:''}`;
     const footerNavItems=['explore','xiaoli','hainan','news','about','partners'].map((r,i)=>`<a href="${url(r+'/')}">${esc(t.nav[i+1])}</a>`).join('');

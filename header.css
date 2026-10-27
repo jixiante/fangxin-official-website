@@ -54,6 +54,7 @@ body:not(:lang(zh)) #site-header .header-trial{max-width:150px;white-space:norma
 }
 /* Business dropdown: opens on hover or keyboard focus, four columns side by side. */
 #site-header .nav-item.has-sub{position:relative;display:inline-flex}
+#site-header .nav-sub-toggle{display:none}
 #site-header .nav-sub{position:absolute;top:100%;left:50%;transform:translateX(-50%);display:grid;grid-template-columns:repeat(4,auto);gap:4px 30px;justify-content:center;width:max-content;max-width:min(680px,92vw);padding:16px 28px;background:#fff;border:1px solid #dce8e2;border-radius:6px;box-shadow:0 18px 44px #103d2f1c;opacity:0;visibility:hidden;transition:opacity .16s,visibility .16s;z-index:60}
 #site-header .nav-item.has-sub:hover .nav-sub,#site-header .nav-item.has-sub:focus-within .nav-sub{opacity:1;visibility:visible}
 #site-header .nav-sub a{padding:7px 0;font-size:13px;font-weight:500;line-height:1.5;color:#3f5c4f;white-space:nowrap}
@@ -87,8 +88,14 @@ body:not(:lang(zh)) #site-header .header-trial{max-width:150px;white-space:norma
  #site-header .nav-sub{position:static;display:flex;flex-direction:column;align-items:stretch;gap:0;width:100%;max-width:none;margin:0;padding:0 40px 20px 68px;transform:none;border:0;border-radius:0;box-shadow:none;opacity:1;visibility:visible;transition:none}
  #site-header #navigation .nav-sub a{padding:10px 0;font-size:16px;font-weight:400;line-height:1.6;color:#617267;white-space:normal;text-align:left}
  #site-header #navigation .nav-sub a:hover{color:#215f47}
+ html.subnav-ready #site-header #navigation .nav-item>a{display:inline-block;padding-right:0;vertical-align:middle}
+ html.subnav-ready #site-header .nav-sub-toggle{display:inline-grid;place-items:center;position:static;width:44px;height:44px;padding:0;vertical-align:middle;border:0;background:transparent;color:#215f47;cursor:pointer}
+ html.subnav-ready #site-header .nav-sub-toggle span{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid currentColor;transition:transform .2s}
+ html.subnav-ready #site-header .nav-sub-toggle[aria-expanded=true] span{transform:rotate(180deg)}
+ html.subnav-ready #site-header .nav-sub-toggle[aria-expanded=false]+.nav-sub{display:none}
  #site-header .header-trial{transform:none}
 }
+@media(prefers-reduced-motion:reduce){#site-header .nav-sub-toggle span{transition:none}}
 @media(max-width:760px){
  html{--compact-header-height:70px}
  #site-header .header-inner,body:not(:lang(zh)) #site-header .header-inner{width:calc(100% - 24px)}
