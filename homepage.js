@@ -123,8 +123,6 @@ function createCarousel(root){
 $$('[data-carousel]').forEach(createCarousel);
 
 const homeButtons=$$('[data-home-example]'),answers=$$('.home-answer');
-// The placeholder is not localized by the build step, so sync it from the translated label.
-$$('.xiaoli-input').forEach(input=>{input.placeholder=input.getAttribute('aria-label')||''});
 homeButtons.forEach((button,index)=>button.addEventListener('click',()=>{
   homeButtons.forEach((tab,i)=>{tab.setAttribute('aria-pressed',String(i===index));tab.classList.toggle('is-active',i===index);});
   answers.forEach((answer,i)=>{answer.setAttribute('aria-hidden',String(i!==index));answer.inert=i!==index;});

@@ -33,6 +33,9 @@ document.addEventListener('keydown',event=>{
 });
 document.addEventListener('click',event=>{if(!event.target.closest('.site-header'))closeMenu()});
 document.querySelector('[data-language]').addEventListener('change',event=>{location.assign(event.target.value+location.hash)});
+const subToggle=nav.querySelector('.nav-sub-toggle');
+document.documentElement.classList.add('subnav-ready');
+subToggle.addEventListener('click',()=>subToggle.setAttribute('aria-expanded',String(subToggle.getAttribute('aria-expanded')!=='true')));
 let opener;
 const mini=document.querySelector('#mini');
 function updateMiniCode(){

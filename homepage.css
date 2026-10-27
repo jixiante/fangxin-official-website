@@ -1073,3 +1073,28 @@ body.home-redesign{--muted:#677b6d}
  .home-redesign .journey-copy{padding:26px 24px 88px}
  .home-redesign .journey-copy h3{font-size:26px;margin-top:14px}
  .home-redesign .journey-carousel .carousel-controls{left:24px;right:24px;bottom:20px}}
+
+/* Clear destinations after the hero, using the existing three entry points. */
+.home-redesign .strip-title strong{white-space:normal;line-height:1.5}
+.home-redesign .strip-title>small{font-size:12px;letter-spacing:0;line-height:1.65;color:#61796b;margin-top:6px}
+.home-redesign .strip-grid a small{white-space:normal;font-size:12px;line-height:1.5;color:#61796b}
+.home-redesign .strip-grid a:focus-visible{outline:2px solid #267b59;outline-offset:5px}
+.home-redesign .xiaoli-heading p{font-size:14px;color:#49695b;line-height:1.6}
+.home-redesign .xiaoli-ask-label{font-size:14px}
+.home-redesign .business-body:after{content:'↗';display:block;margin-top:12px;color:#36835f;font-size:18px;line-height:1}
+@media(min-width:761px) and (max-width:1050px){.home-redesign .strip-title{display:block;grid-column:1/-1}}
+@media(max-width:760px){
+ .home-redesign .strip-grid{grid-template-columns:1fr;gap:0;padding-block:24px}
+ .home-redesign .strip-title{display:block;margin-bottom:12px}
+ .home-redesign .strip-grid>a,.home-redesign .strip-grid>a:nth-child(2){display:flex;text-align:left;border-left:0;border-top:1px solid #e0eee6;padding:12px 0;gap:14px}
+ .home-redesign .strip-icon{margin:0;width:28px;height:28px}
+ .home-redesign .strip-grid b,.home-redesign:not(:lang(zh)) .strip-grid b{font-size:15px;margin:0}
+ .home-redesign .strip-grid a small,.home-redesign:not(:lang(zh)) .strip-grid a small{font-size:12px;max-width:none;margin:2px 0 0}
+ .home-redesign .strip-arrow{display:block;font-size:18px}
+ .home-redesign .business-body{padding:15px 14px 17px}
+ .home-redesign .business-body h3{font-size:17px;line-height:1.45}
+ .home-redesign .business-body p{font-size:14px;line-height:1.7;min-height:0;margin:8px 0 0;color:#536b5e}
+ .home-redesign:not(:lang(zh)) .business-body h3{min-height:0}
+ .home-redesign:not(:lang(zh)) .business-body p{font-size:13px}
+ .home-redesign .xiaoli-heading p{font-size:13px}
+ .home-redesign .xiaoli-window{grid-row:auto}}

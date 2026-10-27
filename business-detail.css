@@ -95,6 +95,8 @@
  .detail-redesign .selection-grid>article{grid-template-columns:1fr}
  .detail-redesign .selection-grid .catalog-media{aspect-ratio:4/3;height:auto}
  .detail-redesign .catalog-hero{padding-block:40px 32px}
+ .detail-redesign .catalog-hero>.wrap{gap:28px}
+ .detail-redesign .catalog-hero-visual{width:min(82%,340px)}
  .detail-redesign .detail-filters{gap:8px}
  .detail-redesign .detail-filters:has(+.beauty-catalog){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr}
  .detail-redesign .detail-filters button{min-height:44px;padding:8px 13px}}
