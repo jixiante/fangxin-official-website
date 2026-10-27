@@ -113,7 +113,7 @@ for(const l of languages){
       title=t.unavailable;body=`${intro('404',t.unavailable,t.unavailableText)}<div class="wrap section">${link('',t.home,'button')}</div>`;
     }
     const redesignedHome=!route;
-    if(redesignedHome){body=localizeHome(homepage,l).replace('<!--HOME_EXAMPLES-->',homeAnswers(l));description=homeText('放心中医药在海南：发现海南中医药文化、康养主题与草本生活。',l);}
+    if(redesignedHome){body=localizeHome(homepage,l).replace('<!--HOME_EXAMPLES-->',homeAnswers(l));description=homeText('放心中醫藥在海南：发现海南中医药文化、康养主题与草本生活。',l);}
     description=({explore:t.businessText,xiaoli:f.xPageText,hainan:t.islandText,news:t.newsText,about:f.about[1],partners:t.partnerText,privacy:t.privacyText})[route]||description;
     const navRoutes=['','explore','xiaoli','hainan','news','about','partners'];
     const nav=navRoutes.map((r,i)=>{
@@ -133,7 +133,7 @@ for(const l of languages){
     const target=path.join(out,l,route);await mkdir(target,{recursive:true});await writeFile(path.join(target,'index.html'),html);
   }
 }
-await writeFile(path.join(out,'index.html'),'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/zh/"><title>放心中医药在海南</title></head><body><a href="/zh/">进入官网 · 简体中文</a> <a href="/en/">English</a> <a href="/ru/">Русский</a></body></html>');
+await writeFile(path.join(out,'index.html'),'<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=/zh/"><title>放心中醫藥在海南</title></head><body><a href="/zh/">进入官网 · 简体中文</a> <a href="/en/">English</a> <a href="/ru/">Русский</a></body></html>');
 await writeFile(path.join(out,'robots.txt'),site.preview?'User-agent: *\nDisallow: /\n':'User-agent: *\nAllow: /\n'+(site.siteUrl?'Sitemap: '+site.siteUrl.replace(/\/$/,'')+'/sitemap.xml\n':''));
 await writeFile(path.join(out,'routes.json'),JSON.stringify(languages.flatMap(l=>routes.map(r=>`/${l}/${r?r+'/':''}`)),null,2));
 console.log(`Built ${languages.length*routes.length} localized pages. No runtime dependencies.`);
